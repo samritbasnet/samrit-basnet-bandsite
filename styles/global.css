@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #323232;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.header__title img {
+  max-width: 150px;
+  height: auto;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.header__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.header__nav-item {
+  margin-right: 20px;
+}
+.header__nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+.header__nav-link:hover {
+  border-bottom: 4px solid #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+  }
+  .header__title img {
+    max-width: 180px;
+  }
+  .header__nav {
+    margin-top: 0;
+  }
+  .header__nav-link {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__title img {
+    max-width: 200px;
+  }
+  .header__nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+.hero__image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.hero__title {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 480px) {
+  .hero {
+    height: 400px;
+  }
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 550px;
+  }
+  .hero__title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 600px;
+  }
+  .hero__title {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=global.css.map */
