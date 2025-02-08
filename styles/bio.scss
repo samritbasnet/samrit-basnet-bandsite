@@ -14,8 +14,7 @@ body {
   @include tablet {
     height: 31.25rem;
   }
-
-  &__image-wrapper {
+  @at-root &__image-wrapper {
     width: 100%;
     height: 100%;
   }
