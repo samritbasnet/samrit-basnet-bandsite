@@ -14,16 +14,15 @@ body {
   @include tablet {
     height: 31.25rem;
   }
-  @at-root &__image-wrapper {
+  &__image-wrapper {
+    position: relative;
     width: 100%;
     height: 100%;
   }
-
   &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
   }
 
   &__text {
