@@ -56,11 +56,6 @@
   text-align: center;
   min-width: 4rem;
 }
-@media screen and (min-width: 768px) {
-  .header__nav-item {
-    flex: none;
-  }
-}
 .header__nav-item--active::after, .header__nav-item:hover::after {
   content: "";
   position: absolute;

@@ -56,10 +56,6 @@
     text-align: center;
     min-width: 4rem;
 
-    @include tablet {
-      flex: none;
-    }
-
     &--active::after,
     &:hover::after {
       content: '';
