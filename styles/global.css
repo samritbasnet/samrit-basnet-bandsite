@@ -8,8 +8,8 @@
 @media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
-    align-items: flex-start;
     padding: 1rem 2rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -77,13 +77,17 @@
   font-size: 0.875rem;
   padding: 10px 0 0.75rem 0;
   display: block;
-}
-.header__nav-link:hover {
-  color: #ffffff;
+  line-height: 1.375rem;
+  font-weight: medium 700;
 }
 @media screen and (min-width: 768px) {
   .header__nav-link {
     padding: 1.5rem 0;
     white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: bold 700;
   }
+}
+.header__nav-link:hover {
+  color: #ffffff;
 }/*# sourceMappingURL=global.css.map */
