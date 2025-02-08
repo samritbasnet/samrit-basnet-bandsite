@@ -7,7 +7,7 @@
   align-items: center;
   background-color: $BandSite-Black;
   width: 100%;
-
+  gap: 30px;
   @include tablet {
     flex-direction: row;
     padding: 1rem 2rem;
@@ -20,7 +20,8 @@
 
   &__title {
     padding: 1rem 0 0.5rem;
-
+    height: 1.25rem;
+    width: 7.5rem;
     @include tablet {
       padding: 1rem 2rem 1rem 0;
     }
@@ -67,7 +68,7 @@
       background-color: $white;
 
       @include tablet {
-        bottom: -14px;
+        bottom: -0.8rem;
         width: 100%;
       }
     }
@@ -84,8 +85,8 @@
     @include tablet {
       padding: 1.5rem 0;
       white-space: nowrap;
-      font-size: 0.875rem;
-      font-weight: bold 700;
+      font-size: 1rem;
+      font-weight: Medium 700;
     }
 
     &:hover {

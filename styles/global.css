@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #323232;
   width: 100%;
+  gap: 30px;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -19,6 +20,8 @@
 }
 .header__title {
   padding: 1rem 0 0.5rem;
+  height: 1.25rem;
+  width: 7.5rem;
 }
 @media screen and (min-width: 768px) {
   .header__title {
@@ -67,7 +70,7 @@
 }
 @media screen and (min-width: 768px) {
   .header__nav-item--active::after, .header__nav-item:hover::after {
-    bottom: -14px;
+    bottom: -0.8rem;
     width: 100%;
   }
 }
@@ -84,8 +87,8 @@
   .header__nav-link {
     padding: 1.5rem 0;
     white-space: nowrap;
-    font-size: 0.875rem;
-    font-weight: bold 700;
+    font-size: 1rem;
+    font-weight: Medium 700;
   }
 }
 .header__nav-link:hover {

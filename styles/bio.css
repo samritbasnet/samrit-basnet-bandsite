@@ -10,7 +10,7 @@ body {
 
 .hero {
   position: relative;
-  height: 500px;
+  height: 14rem;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -18,10 +18,27 @@ body {
     height: 31.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 37rem;
+  }
+}
 .hero__image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+}
+.hero__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #323232;
+  opacity: 0.5;
+  z-index: 1;
 }
 .hero__image {
   width: 100%;
@@ -32,78 +49,38 @@ body {
 .hero__text {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 25%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: #ffffff;
-  width: 90%;
-  box-sizing: border-box;
   z-index: 2;
-}
-.hero__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2rem;
-  margin-left: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .hero__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 550px;
-  }
-  .hero__content {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .hero__title {
-    font-size: 3.5rem;
+  .hero__text {
+    left: 24%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero {
-    height: 600px;
+  .hero__text {
+    left: 25%;
   }
-  .hero__content {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+}
+.hero__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold 700;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 4rem;
+    font-size: 3.75rem;
+    line-height: 68px;
+    font-weight: bold 700;
   }
 }
-.about-musician {
-  position: absolute;
-  height: 500px;
-  overflow: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.about-musician__image {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .about {
-    height: 250px;
-  }
-  .about__image {
-    background-size: cover;
-    -o-object-fit: contain;
-       object-fit: contain;
-    height: auto;
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 68px;
+    font-weight: bold 700;
   }
 }/*# sourceMappingURL=bio.css.map */
