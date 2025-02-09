@@ -174,7 +174,7 @@ body {
 @media screen and (min-width: 768px) {
   .about-musician__quote {
     flex-direction: column;
-    padding: 36px 0;
+    padding: 36px 100px;
     width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -207,11 +207,17 @@ body {
     line-height: 1.375rem;
     font-weight: 500;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 .about-musician__description-text {
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__info {
+    display: flex;
+    gap: 15px;
+  }
 }
 
 .gallery {
