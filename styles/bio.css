@@ -90,22 +90,56 @@ body {
   flex-direction: column;
   padding: 1rem;
 }
-.about-musiciantext {
+@media screen and (min-width: 768px) {
+  .about-musician {
+    padding: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician {
+    padding: 48px;
+  }
+}
+.about-musician__text {
   text-align: left;
   padding: 24px 0;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__text {
+    padding: 36px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__text {
+    padding: 36px 0;
+  }
 }
 .about-musician__heading {
   margin: 0;
   font-size: 0.875rem;
   line-height: 32px;
   font-weight: 700;
-  color: #000000;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__heading {
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+  }
 }
 .about-musician__image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__image-wrapper {
+    width: 80%;
+    align-items: center;
+    margin-left: 6.5rem;
+  }
 }
 .about-musician__image {
   width: 100%;
@@ -116,35 +150,22 @@ body {
 }
 .about-musician__quote {
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   text-align: left;
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 700;
   color: #323232;
 }
-.about-musician __role {
-  font-weight: 700;
-  font-size: 0.875rem;
-  margin-top: 8px;
+@media screen and (min-width: 768px) {
+  .about-musician__quote {
+    padding: 36px 0;
+  }
 }
-.about-musician .about-musician__description {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-.about-musician .about-musician__description-title {
-  font-size: 0.875rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #323232;
-}
-.about-musician .about-musician__description-text {
-  font-size: 0.8125rem;
-  line-height: 1.4;
-  font-weight: 400;
-  color: #323232;
-  text-align: justify;
+@media screen and (min-width: 1280px) {
+  .about-musician__quote {
+    padding: 36px 0;
+  }
 }
 
 .gallery {
@@ -161,8 +182,19 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    gap: 36px;
+    padding: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__container {
+    gap: 36px;
+    padding: 48px;
+  }
 }
 .gallery__container .gallery__item {
   width: 100%;

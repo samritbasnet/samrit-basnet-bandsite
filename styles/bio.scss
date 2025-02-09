@@ -1,12 +1,14 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
 @use 'partials/fonts' as *;
+
 html,
 body {
   margin: 0;
   padding: 0;
 }
 
+// Hero Section
 .hero {
   position: relative;
   height: 14rem;
@@ -78,21 +80,46 @@ body {
     }
   }
 }
-//About-section///
+
+// About Section
 .about-musician {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  &text {
+
+  @include tablet {
+    padding: 48px;
+  }
+
+  @include desktop {
+    padding: 48px;
+  }
+
+  &__text {
     text-align: left;
     padding: 24px 0;
+
+    @include tablet {
+      padding: 36px 0;
+    }
+
+    @include desktop {
+      padding: 36px 0;
+    }
   }
+
   &__heading {
     margin: 0;
     font-size: 0.875rem;
     line-height: 32px;
     font-weight: 700;
-    color: $BandSite-DarkBlack;
+    color: $BandSite-Black;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      font-size: 2rem;
+    }
   }
 
   &__image-wrapper {
@@ -100,6 +127,12 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+
+    @include tablet {
+      width: 80%;
+      align-items: center;
+      margin-left: 6.5rem;
+    }
   }
 
   &__image {
@@ -108,43 +141,27 @@ body {
     border-radius: 0.1rem;
     object-fit: cover;
   }
+
   &__quote {
     margin: 0;
-    padding: 0;
+    padding: 16px 0;
     text-align: left;
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 700;
     color: $BandSite-Black;
-  }
-  __role {
-    font-weight: 700;
-    font-size: 0.875rem;
-    margin-top: 8px;
-  }
-  .about-musician__description {
-    margin: 0;
-    padding: 0;
-    text-align: left;
 
-    &-title {
-      font-size: 0.875rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: $BandSite-Black;
+    @include tablet {
+      padding: 36px 0;
     }
 
-    &-text {
-      font-size: 0.8125rem;
-      line-height: 1.4;
-      font-weight: 400;
-      color: $BandSite-Black;
-      text-align: justify;
+    @include desktop {
+      padding: 36px 0;
     }
   }
 }
-//GALLERY SECTION
 
+// Gallery Section
 .gallery {
   text-align: center;
 
@@ -160,8 +177,17 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 16px;
+
+    @include tablet {
+      gap: 36px;
+      padding: 36px;
+    }
+
+    @include desktop {
+      gap: 36px;
+      padding: 48px;
+    }
 
     .gallery__item {
       width: 100%;
