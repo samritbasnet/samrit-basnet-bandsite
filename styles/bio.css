@@ -20,7 +20,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .hero {
-    height: 37rem;
+    height: 36rem;
   }
 }
 .hero__image-wrapper {
@@ -47,6 +47,8 @@ body {
      object-fit: cover;
 }
 .hero__text {
+  font-family: Nunito Sans, sans-serif;
+  font-weight: 700;
   position: absolute;
   top: 50%;
   left: 25%;
@@ -61,27 +63,28 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .hero__text {
-    left: 25%;
+    left: 26%;
   }
 }
 .hero__title {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold 700;
+  font-weight: 700;
+  font-family: Nunito Sans, sans-serif;
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 3.75rem;
-    line-height: 68px;
-    font-weight: bold 700;
+    line-height: 4.25rem;
+    font-weight: bold;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
     font-size: 3.75rem;
-    line-height: 68px;
-    font-weight: bold 700;
+    line-height: 4.25rem;
+    font-weight: bold;
   }
 }
 
@@ -92,6 +95,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about-musician {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 48px;
   }
 }
@@ -111,21 +118,27 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .about-musician__text {
-    padding: 36px 0;
+    padding: 38px 0;
   }
 }
-.about-musician__heading {
+.about-musician__heading-text {
   margin: 0;
-  font-size: 0.875rem;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: Nunito Sans, sans-serif;
   font-weight: 700;
   color: #323232;
 }
 @media screen and (min-width: 768px) {
-  .about-musician__heading {
-    flex-direction: row;
-    align-items: center;
-    font-size: 2rem;
+  .about-musician__heading-text {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__heading-text {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 .about-musician__image-wrapper {
@@ -133,12 +146,47 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .about-musician__image-wrapper {
     width: 80%;
-    align-items: center;
-    margin-left: 6.5rem;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__image-wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.about-musician__quote {
+  margin: 0;
+  padding: 16px 0;
+  text-align: left;
+  font-size: 0.875rem;
+  font-family: Nunito Sans, sans-serif;
+  line-height: 1.35rem;
+  font-weight: 700;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__quote {
+    flex-direction: column;
+    padding: 36px 0;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: medium;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__quote {
+    padding: 36px 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: medium;
   }
 }
 .about-musician__image {
@@ -148,57 +196,59 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about-musician__quote {
-  margin: 0;
-  padding: 16px 0;
-  text-align: left;
+.about-musician__description {
   font-size: 0.875rem;
-  line-height: 1.375rem;
   font-weight: 700;
-  color: #323232;
+  margin-top: 0;
 }
 @media screen and (min-width: 768px) {
-  .about-musician__quote {
-    padding: 36px 0;
+  .about-musician__description {
+    font-size: 1.5rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
   }
 }
-@media screen and (min-width: 1280px) {
-  .about-musician__quote {
-    padding: 36px 0;
-  }
+.about-musician__description-text {
+  font-weight: 400;
 }
 
 .gallery {
   text-align: center;
+  margin: 0 auto;
+  padding: 16px;
 }
 .gallery__title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #323232;
-  margin-bottom: 1rem;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 .gallery__container {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
 }
+.gallery .gallery__item {
+  flex: 1 1 100%;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media screen and (min-width: 768px) {
-  .gallery__container {
-    gap: 36px;
-    padding: 36px;
+  .gallery .gallery__item {
+    flex: 1 1 30%;
+    max-width: 30%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .gallery__container {
-    gap: 36px;
-    padding: 48px;
+  .gallery .gallery__item {
+    margin-bottom: 20px;
   }
-}
-.gallery__container .gallery__item {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=bio.css.map */

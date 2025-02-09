@@ -28,8 +28,9 @@
       padding: 1rem 2rem 1rem 0;
     }
 
-    img {
+    &__logo {
       width: 120px;
+      height: auto;
     }
   }
 }
@@ -82,13 +83,18 @@
     font-size: 0.875rem;
     padding: 10px 0 0.75rem 0;
     display: block;
+    font-family: $font-stack;
     line-height: 1.375rem;
-    font-weight: medium 700;
+    font-weight: 700;
     @include tablet {
       padding: 1.5rem 0;
       white-space: nowrap;
       font-size: 1rem;
-      font-weight: Medium 700;
+      font-weight: 700;
+      font-family: $font-stack;
+    }
+    @include desktop {
+      padding: 2rem 0;
     }
 
     &:hover {
