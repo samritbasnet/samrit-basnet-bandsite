@@ -1,6 +1,8 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
-
+* {
+  box-sizing: border-box;
+}
 .header {
   display: flex;
   flex-direction: column;
