@@ -145,4 +145,28 @@ body {
   font-weight: 400;
   color: #323232;
   text-align: justify;
+}
+
+.gallery {
+  text-align: center;
+}
+.gallery__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #323232;
+  margin-bottom: 1rem;
+}
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.gallery__container .gallery__item {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=bio.css.map */

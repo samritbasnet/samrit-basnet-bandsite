@@ -142,3 +142,30 @@ body {
     }
   }
 }
+//GALLERY SECTION
+
+.gallery {
+  text-align: center;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $BandSite-Black;
+    margin-bottom: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .gallery__item {
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
