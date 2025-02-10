@@ -1,11 +1,13 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
-@use 'partials/fonts' as *;
+
+@use 'partials/typography' as *;
 
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 // Hero Section
@@ -268,7 +270,16 @@ body {
   p {
     font-weight: 300;
   }
-
+  &__address-heading {
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'Nunito';
+  }
+  &__address-email {
+    font-size: 0.9rem;
+    font-family: 'Nunito';
+    font-weight: 400;
+  }
   &__title {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -302,15 +313,6 @@ body {
     font-size: 0.9rem;
     line-height: 1.4rem;
     margin: 20px 0;
-
-    &-heading {
-      font-size: 0.875rem;
-      font-weight: 600;
-      font-family: $font-stack;
-    }
-    &-email {
-      font-size: 0.9rem;
-    }
 
     .__details p:nth-child(3) {
       margin-top: 10px;
