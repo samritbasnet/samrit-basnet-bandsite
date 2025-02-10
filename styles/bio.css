@@ -260,4 +260,54 @@ body {
     margin-bottom: 20px;
     overflow-y: auto;
   }
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  text-align: left;
+  padding: 20px;
+  font-family: Nunito Sans, sans-serif;
+}
+.footer__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-family: Nunito Sans, sans-serif;
+}
+.footer__socials {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+.footer__details {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin: 20px 0;
+}
+.footer__details-heading {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: Nunito Sans, sans-serif;
+}
+.footer__details-email {
+  font-size: 0.9rem;
+}
+.footer__details .__details p:nth-child(3) {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer__details .__details p:nth-child(6) {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer__details .__details p:nth-child(9) {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer__copyright {
+  margin-top: 20px;
+  font-size: 0.8rem;
 }/*# sourceMappingURL=bio.css.map */
