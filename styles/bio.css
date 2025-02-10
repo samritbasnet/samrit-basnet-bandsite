@@ -183,8 +183,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .about-musician__quote {
-    padding: 36px 0;
-    font-size: 24px;
+    padding: 40px 270px;
+    font-size: 1.5rem;
     line-height: 32px;
     font-weight: medium;
   }
