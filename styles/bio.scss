@@ -115,8 +115,7 @@ body {
       padding: 38px 0;
     }
   }
-  &__heading {
-  }
+
   &__heading-text {
     margin: 0;
     font-size: 1.5rem;
@@ -262,21 +261,41 @@ body {
   text-align: left;
   padding: 20px;
   font-family: $font-stack;
+  @include tablet {
+    align-items: center;
+    text-align: center;
+  }
+  p {
+    font-weight: 300;
+  }
 
   &__title {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 20px;
     font-family: $font-stack;
+
+    @include tablet {
+      margin-bottom: 0.625rem;
+
+      font-size: 2.25rem;
+      line-height: 2rem;
+      font-weight: 400;
+      padding: 30px;
+    }
   }
 
   &__socials {
     display: flex;
     justify-content: flex-start;
-
-    gap: 2rem;
+    gap: 1.25rem;
     margin-bottom: 20px;
+    @include tablet {
+      margin-top: 35px;
+      margin-left: 1.25rem;
+      gap: 2.5rem;
+    }
   }
 
   &__details {
@@ -286,7 +305,7 @@ body {
 
     &-heading {
       font-size: 0.875rem;
-      font-weight: 700;
+      font-weight: 600;
       font-family: $font-stack;
     }
     &-email {
@@ -307,10 +326,69 @@ body {
       margin-top: 10px;
       margin-bottom: 20px;
     }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  @include tablet {
+    &__top-container {
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+    }
+  }
+  @include tablet {
+    &__header-container {
+      flex-direction: row;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 
+  &__logo {
+    margin-top: 1.875rem;
+    width: 7.5rem;
+    height: 1.25rem;
+
+    @include tablet {
+    }
+  }
+  &__address-info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__address-detai {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    @include tablet {
+      flex-direction: row;
+    }
+    gap: 40px;
+  }
+  &__address-first {
+    text-align: left;
+  }
+
+  &__address-second {
+    text-align: left;
+  }
+
+  &__address-third {
+    text-align: left;
+  }
   &__copyright {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.8rem;
   }
 }
