@@ -8,33 +8,191 @@
     <link rel="stylesheet" href="./styles/global.css" />
   </head>
   <body>
-   <header class="header">
-  <div class="header__title">
-    <img src="./assets/logos/Logo-bandsite.svg" alt="bandsite-logo">
-  </div>
-  <nav class="header__nav">
-    <ul class="header__nav-list">
-      <li class="header__nav-item">
-        <a href="./index.html" class="header__nav-link" aria-label="Biography">Biography</a>
-      </li>
-      <li class="header__nav-item">
-        <a href="#" class="header__nav-link" aria-label="Shows">Shows</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero__image-wrapper">
-    <img src="./assets/images/hero-bio.jpg" alt="A description of the hero image" class="hero__image" />
-  </div>
-  <div class="hero__content">
-    <h2 class="hero__title">The Bee Knees</h2>
-  </div>
-</section>
-      <main>
-        <section></section>
-      </main>
+    <header class="header">
+      <img class="header__logo" src="./assets/logos/Logo-bandsite.svg" alt="bandsite-logo" />
+      <div class="header__nav-container">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="./index.html" class="header__nav-link" aria-label="Biography">Biography</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link" aria-label="Shows">Shows</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__image-wrapper">
+        <img
+          src="./assets/images/hero-bio.jpg"
+          alt="A description of the hero image"
+          class="hero__image"
+        />
+      </div>
+      <div class="hero__text">
+        <h2 class="hero__title">The Bee Knees</h2>
+      </div>
+    </section>
+
+    <!-- About musician part -->
+    <article class="about-musician">
+      <div class="about-musician__heading">
+        <div class="about-musician__text">
+          <h2 class="about-musician__heading-text">About the Musicians</h2>
+        </div>
+        <div class="about-musician__image-wrapper">
+          <img
+            class="about-musician__image"
+            src="./assets/images/band.jpg"
+            alt="The Bees Knees Band Photo"
+          />
+        </div>
+
+        <div class="about-musician__quote">
+          <p>
+            “We push each other to be the best. It’s not uncommon for one of us to say ‘this needs
+            to be better, back to the drawing board.’”
+          </p>
+          <p class="about-musician__role">- Lead vocalist of The Bees Knees</p>
+        </div>
+        <div class="about-musician__description">
+          <h3 class="about-musician__title">The Bees Knees</h3>
+          <div class="about-musician__info">
+            <p class="about-musician__description-text">
+              The Bees Knees is a pop rock band originating from San Francisco, California. The band
+              consists of a dynamic lineup featuring two lead vocalists, two guitarists, a bassist,
+              a keyboardist, and a drummer. The band achieved its first commercial success as an
+              unsigned act, drawing attention from their future manager. Having extensive experience
+              working with both new and seasoned acts, the manager was confident the band could
+              succeed even further with more support, pushing The Bees Knees to sign with a
+              well-known record label.
+            </p>
+            <p class="about-musician__description-text">
+              From there, the band has soared, gaining international recognition and ranking in the
+              top 10 on the Poster Charts. New fans immediately fell in love with the band’s
+              original and organic attitude, solidifying their place as one of the hottest and
+              fastest up-and-coming acts of this century. Fans affectionately refer to themselves as
+              “The Hive” and are drawn to their candid and authentic performances on stage. The Bees
+              Knees are currently recording their second studio album, looking to be released in
+              early 2024.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="gallery">
+      <h2 class="gallery__title">Photo Gallery</h2>
+      <div class="gallery__container">
+        <img src="/assets/images/Photo-gallery-1.jpg" alt="crowd-cheer" class="gallery__item" />
+        <img
+          src="/assets/images/Photo-gallery-2.jpg"
+          alt="lady having good vibe"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-3.jpg"
+          alt="crowds hands up in live"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-4.jpg"
+          alt="lady hands up in live"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-5.jpg"
+          alt="beautiful atomsphere"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-6.jpg"
+          alt="artist enjoying moment in stage"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-7.jpg"
+          alt="beautiful lighting and moment crowd-cheer"
+          class="gallery__item"
+        />
+        <img
+          src="/assets/images/Photo-gallery-8.jpg"
+          alt="playing with instruement"
+          class="gallery__item"
+        />
+        <img src="/assets/images/Photo-gallery-9.jpg" alt="dance time" class="gallery__item" />
+      </div>
+    </article>
+    <!-- Footer-section
+    <footer class="footer">
+      <div>
+        <div>
+          <getInTouch></getInTouch>
+          <socials></socials>
+        </div>
+        <logo></logo>
+      </div> -->
+
+    <footer class="footer">
+      <div class="footer__top-container">
+        <div class="footer__header-container">
+          <div class="footer__title">Get in Touch</div>
+          <div class="footer__socials">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+              <img src="/assets/icons/svg/Icon-instagram.svg" alt="Instagram Logo" />
+            </a>
+
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+              <img src="/assets/icons/svg/Icon-facebook.svg" alt="Facebook Logo" />
+            </a>
+
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+              <img src="/assets/icons/svg/Icon-twitter.svg" alt="Twitter Logo" />
+            </a>
+          </div>
+        </div>
+        <div class="footer__logo">
+          <img src="/assets/logos/Logo-bandsite.svg" alt="footer logo" />
+        </div>
+      </div>
+      <!-- /TODO ADRESS PLACEMENT IN CSS -->
+      <div class="footer__address-info">
+        <div class="footer__bottom-container">
+          <div class="footer__address-detai">         <div class="footer__address-first">
+            <h2 class="footer__address-heading">The Bees Knees Management</h2>
+            <p>
+              503 Broadway Penthouse, <br />
+              New York, NY 10012, USA
+            </p>
+            <p class="footer__address-email">info@thebeesknees.com</p>
+          </div>
+
+          <div class="footer__address-second">
+            <h2 class="footer__address-heading">Limitless Artist Group</h2>
+            <p>
+              Booking Agent for <br />
+              US / South America / Japan
+            </p>
+            <p class="footer__address-email">bookings@limitlessag.com</p>
+          </div>
+
+          <div class="footer__address-third">
+            <h2 class="footer__address-heading">ARCH Entertainment</h2>
+            <p>
+              Booking Agent for <br />
+              UK / EU / AU
+            </p>
+            <p class="footer__address-email">bookings@archentertainment.com</p>
+          </div></div>
+
+        </div>
+       </div>
+      </div>
+
+      <div class="footer__copyright">Copyright The Bees Knees © 2025 All Rights Reserved</div>
+    </footer>
   </body>
 </html>

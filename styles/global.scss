@@ -1,153 +1,108 @@
 @use 'partials/variables' as *;
 @use 'partials/mixins' as *;
-
+* {
+  box-sizing: border-box;
+}
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 40px;
   background-color: $BandSite-Black;
-  color: #fff;
-  box-sizing: border-box;
   width: 100%;
-  position: relative;
-  z-index: 1;
-
-  &__title {
-    img {
-      max-width: 150px;
-      height: auto;
-    }
-  }
-
-  &__nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-    &-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    &-item {
-      margin-right: 20px;
-    }
-
-    &-link {
-      text-decoration: none;
-      color: #fff;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-
-      &:hover {
-        border-bottom: 4px solid $white;
-      }
-    }
-  }
-
+  gap: 30px;
   @include tablet {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px;
-
-    &__title {
-      img {
-        max-width: 180px;
-      }
-    }
-
-    &__nav {
-      margin-top: 0;
-
-      &-link {
-        font-size: 1rem;
-      }
-    }
+    padding: 1rem 2rem;
+    line-height: 2rem;
   }
 
   @include desktop {
-    &__title {
-      img {
-        max-width: 200px;
-      }
-    }
-
-    &__nav {
-      &-link {
-        font-size: 1.1rem;
-      }
-    }
-  }
-}
-
-.hero {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-
-  &__image-wrapper {
-    width: 100%;
-    height: 100%;
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  &__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: $white;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 2;
+    padding: 1rem 10rem;
   }
 
   &__title {
-    font-size: 3rem;
+    padding: 1rem 0 0.5rem;
+    height: 1.25rem;
+    width: 7.5rem;
+    @include tablet {
+      padding: 1rem 2rem 1rem 0;
+    }
+
+    &__logo {
+      width: 120px;
+      height: auto;
+    }
+  }
+}
+
+.header__nav {
+  width: 100%;
+
+  @include tablet {
+    width: auto;
+  }
+
+  &-list {
+    list-style: none;
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 0;
+    gap: 8rem;
+    display: flex;
+    width: 100%;
+    @include tablet {
+      gap: 2rem;
+    }
   }
-}
 
-@include mobile {
-  .hero {
-    height: 400px;
+  &-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    min-width: 4rem;
 
-    &__title {
-      font-size: 2.5rem;
+    &--active::after,
+    &:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $white;
+
+      @include tablet {
+        bottom: -0.8rem;
+        width: 100%;
+      }
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $Mercury;
+    font-size: 0.875rem;
+    padding: 10px 0 0.75rem 0;
+    display: block;
+    font-family: $font-stack;
+    line-height: 1.375rem;
+    font-weight: 700;
+    @include tablet {
+      padding: 1.5rem 0;
+      white-space: nowrap;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font-stack;
+    }
+    @include desktop {
+      padding: 2rem 0;
+    }
+
+    &:hover {
+      color: $white;
     }
   }
 }
-
-@include tablet {
-  .hero {
-    height: 550px;
-
-    &__title {
-      font-size: 3.5rem;
-    }
-  }
-}
-
-@include desktop {
-  .hero {
-    height: 600px;
-
-    &__title {
-      font-size: 4rem;
-    }
-  }
+//footer
+.footer {
+  background-color: $BandSite-Black;
 }
