@@ -77,12 +77,12 @@ body {
     @include tablet {
       font-size: 3.75rem;
       line-height: 4.25rem;
-      font-weight: bold;
+      font-weight: 700;
     }
     @include desktop {
       font-size: 3.75rem;
       line-height: 4.25rem;
-      font-weight: bold;
+      font-weight: 700;
     }
   }
 }
@@ -167,7 +167,7 @@ body {
       flex-direction: column;
       padding: 36px 100px;
       width: 100%;
-
+      font-family: 'Nunito';
       font-size: 1.5rem;
       line-height: 2rem;
       font-weight: medium;
@@ -196,12 +196,25 @@ body {
       font-size: 1.5rem;
       line-height: 1.375rem;
       font-weight: 500;
+      font-family: 'Nunito';
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
       display: flex;
       flex-direction: column;
     }
   }
   &__description-text {
     font-weight: 400;
+    font-size: 0.8125rem;
+    font-family: 'Nunito';
+    line-height: 1.125rem;
+    @include tablet {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.375rem;
+    }
   }
   &__info {
     @include tablet {
@@ -218,10 +231,15 @@ body {
   padding: 16px;
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 32px;
     font-weight: bold;
     margin-bottom: 24px;
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+    }
   }
 
   &__container {
@@ -229,7 +247,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
-
     gap: 16px;
   }
 
@@ -281,9 +298,13 @@ body {
     font-family: 'Nunito';
 
     @include tablet {
+      font-size: 2.25rem;
       line-height: 2rem;
       font-weight: 700;
       padding: 30px;
+    }
+    @include desktop {
+      padding: 34px;
     }
   }
 

@@ -89,14 +89,14 @@ body {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 
@@ -188,6 +188,7 @@ body {
     flex-direction: column;
     padding: 36px 100px;
     width: 100%;
+    font-family: "Nunito";
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: medium;
@@ -218,12 +219,29 @@ body {
     font-size: 1.5rem;
     line-height: 1.375rem;
     font-weight: 500;
+    font-family: "Nunito";
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__description {
     display: flex;
     flex-direction: column;
   }
 }
 .about-musician__description-text {
   font-weight: 400;
+  font-size: 0.8125rem;
+  font-family: "Nunito";
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__description-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .about-musician__info {
@@ -238,10 +256,17 @@ body {
   padding: 16px;
 }
 .gallery__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   font-weight: bold;
   margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
 }
 .gallery__container {
   display: flex;
@@ -299,9 +324,15 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__title {
+    font-size: 2.25rem;
     line-height: 2rem;
     font-weight: 700;
     padding: 30px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    padding: 34px;
   }
 }
 .footer__socials {
