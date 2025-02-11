@@ -198,7 +198,7 @@ body {
   .about-musician__quote {
     padding: 40px 270px;
     font-size: 1.5rem;
-    line-height: 32px;
+    line-height: 2rem;
     font-weight: medium;
   }
 }
