@@ -128,23 +128,24 @@
       </div>
     </article>
 
-    <!-- Form -->
-    <article class="comment-section">
-      <form class="form" id="myform">
-        <h1>Join the Conversation</h1>
-        <label for="name" class="comment_label">Name
-          <input placeholder="Enter your name" id="name" class="comment__input">
-        </label>
-        <label for="commenttext" class="comment__label"> <!-- Corrected 'for' attribute -->
-          COMMENT
-          <textarea id="commenttext" placeholder="Add a new comment" class="comment__textarea"></textarea>
-        </label>
-        <button class="comment__button" type="submit">Comment</button>
-      </form>
-    </article>
     
     <!-- Comment submitted section -->
-    <div id="commentSubmissions"></div>
+    <div class="comment-list">
+    </div>
+
+    <section>
+      <h2>Join the Conversation</h2>
+      <form class="add-new">
+          <label for="name">Name</label>
+          <input name="name" id="name">
+         
+          <label for="comment">Comment</label>
+          <textarea name="comment" id="comment"></textarea>
+          <button type="submit">Comment</button>
+      </form>
+  </section>
+
+
     <footer class="footer">
       <div class="footer__top-container">
         <div class="footer__header-container">

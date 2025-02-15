@@ -24,23 +24,61 @@ const comment=[
 function createElementWithClassAndContent(element, className, textContent) {
     const newElement = document.createElement(element);
 
-    if (className !== undefined) {
+    if (className) {
         newElement.classList.add(className);
     }
 
-    if (textContent !== undefined) {
+    if (textContent) {
         newElement.innerText = textContent;
     }
 
     return newElement;
 }
 
-
-
-
 function commentCard(person){
 const articleEl=createElementWithClassAndContent('article','comment');
-const avatarEl=createElementWithClassAndContent('avatar','comment__avatar');
-articleEl.src=person.image?.src ?? 'assets/images/Mohan-muruge.jpg'
-imageEl.alt = person.image?.alt ?? 'a placeholder comment avatar image';
+const avatarEl=document.createElement('img');
+avatarEl.src = person.image?.src ?? 'assets/images/Mohan-muruge.jpg';
+avatarEl.alt = person.image?.alt ?? 'a placeholder comment avatar image';
+
+articleEl.appendChild(avatarEl);
+
+const commentContentDiv=createElementWithClassAndContent('div','comment__component');
+const nameHeader=createElementWithClassAndContent('h3',undefined,person.name);
+const commentParagraph = createElementWithClassAndContent('p', undefined, person.comment);
+
+commentContentDiv.appendChild(nameHeader);
+commentContentDiv.appendChild(commentParagraph);
+articleEl.appendChild(commentContentDiv);
+
+return articleEl;
 }
+const commentList=document.querySelector('.comment-list');
+
+function renderComment(){
+    commentList.replaceChildren();
+
+    comment.forEach((person)=>{
+        const commentCardElement=commentCard(person)
+        commentList.appendChild(commentCardElement);
+    })
+}
+
+const addNewForm = document.querySelector('.add-new');
+
+addNewForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+
+    const name = event.target.name.value.trim();
+    const commentText = event.target.comment.value.trim();
+
+    if (!name || !commentText) return; 
+
+    const person = { name, comment: commentText };
+
+    comment.unshift(person); 
+    renderComment();
+    event.target.reset(); 
+});
+
+renderComment(); 
