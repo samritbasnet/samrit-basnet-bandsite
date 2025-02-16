@@ -1,0 +1,65 @@
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/global' as *;
+@use 'partials/typography' as *;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 40px;
+    color: white;
+    overflow: hidden;
+  
+    &__image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; // Moves the image behind the text
+    }
+  
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%); // Darkens the background for contrast
+      display: block;
+    }
+  
+    &__content {
+      max-width: 600px;
+      position: relative;
+      z-index: 2; // Ensures text is above the background
+      display: block;
+    }
+  
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    &__subtitle {
+      font-size: 36px;
+      font-weight: bold;
+    }
+  
+    &__music {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  

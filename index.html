@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
-    <script src="./scripts/index-page.js" defer></script>
     <link rel="stylesheet" href="./styles/global.css" />
   </head>
   <body>
@@ -18,7 +17,7 @@
               <a href="./index.html" class="header__nav-link" aria-label="Biography">Biography</a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link" aria-label="Shows">Shows</a>
+              <a href="./pages/shows.html" class="header__nav-link" aria-label="Shows">Shows</a>
             </li>
           </ul>
         </nav>
@@ -129,13 +128,11 @@
     </article>
 
     
-    <!-- Comment submitted section -->
-    <div class="comment-list">
-    </div>
-
+   
     <section>
       <h2>Join the Conversation</h2>
       <form class="add-new">
+        <img class="form-header" src="./assets/images/Mohan-muruge.jpg" class="avatar" alt="avatar image ">
           <label for="name">Name</label>
           <input name="name" id="name" placeholder="Enter your name">
          
@@ -144,6 +141,10 @@
           <button type="submit">Comment</button>
       </form>
   </section>
+   <!-- Comment submitted section -->
+   <div class="comment-list">
+  </div>
+
 
 
     <footer class="footer">
