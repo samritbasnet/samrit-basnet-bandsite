@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const showList = document.getElementById("shows-list");
 
     function renderShows() {
-        showList.innerHTML = ""; // Clear previous shows
+        
 
         showData.forEach(show => {
             const row = createElementWithClassAndContent('div', 'show-row');

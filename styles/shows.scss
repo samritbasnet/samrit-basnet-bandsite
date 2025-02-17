@@ -17,7 +17,7 @@ body {
     justify-content: center;
     text-align: left;
     padding: 40px;
-    color: white;
+    color:$white;
     overflow: hidden;
   
     &__image-wrapper {
@@ -73,6 +73,92 @@ body {
       border-radius: 10px;
       display: block;
       margin-top: 20px;
+    }
+  }
+  .shows-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .table-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .table-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $silver;
+        font-weight: 400;
+  }
+  
+  .header-item {
+    flex: 1;
+    text-align: left;
+  }
+  
+  #shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  
+  .show-row {
+    display: flex
+    ;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 15px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid $Mercury;
+  
+    &:hover {
+      background-color: $Alabaster;
+    }
+  
+    &.selected {
+      background-color:$Mercury;
+    }
+  }
+  
+  .details {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .show-date {
+    font-weight: bold;
+  }
+  
+  .buy-ticket {
+    flex: 1;
+    background-color: $BandSite-Black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background-color: #333;
     }
   }
   
