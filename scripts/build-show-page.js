@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function createElementWithClassAndContent(tag, className = "", textContent = "") {
         const newElement = document.createElement(tag);
 
-        if (className) {
+        if (className!==undefined) {
             newElement.classList.add(className);
         }
 
-        if (textContent) {
+        if (textContent!==undefined) {
             newElement.textContent = textContent;
         }
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const venue = createElementWithClassAndContent('span', 'show-venue', show.venue);
             const location = createElementWithClassAndContent('span', 'show-location', show.location);
 
-            // Buy Ticket Button
+            
             const buyButton = createElementWithClassAndContent('button', 'buy-ticket', 'Buy Tickets');
             buyButton.addEventListener("click", () => {
                 alert(`Tickets for ${show.venue} on ${show.date} clicked!`);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             details.appendChild(venue);
             details.appendChild(location);
             row.appendChild(details);
-            row.appendChild(buyButton); // Append button to row
+            row.appendChild(buyButton); 
 
             showList.appendChild(row);
         });
