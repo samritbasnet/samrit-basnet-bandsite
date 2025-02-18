@@ -583,6 +583,13 @@ body {
   gap: 1rem;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .comment-list {
+    justify-content: center;
+    max-width: 53.125rem;
+    padding-bottom: 2rem;
+  }
+}
 
 .comment {
   display: flex;
@@ -601,6 +608,10 @@ body {
      object-fit: cover;
 }
 
+.form-container {
+  border-bottom: 1px solid #e1e1e1;
+}
+
 .add-new {
   display: flex;
   flex-direction: row;
@@ -609,7 +620,6 @@ body {
   padding: 1rem;
   width: 90%;
   border-radius: 0.25rem;
-  border-bottom: 1px solid #e1e1e1;
   align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
