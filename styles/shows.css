@@ -102,6 +102,21 @@
 .footer p {
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  .footer__top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 .footer__title {
   font-size: 24px;
   line-height: 32px;
@@ -135,44 +150,6 @@
     gap: 40px;
   }
 }
-.footer__details {
-  font-size: 14.4px;
-  line-height: 22.4px;
-  margin: 1.25rem 0;
-}
-.footer__details p:nth-child(3),
-.footer__details p:nth-child(6),
-.footer__details p:nth-child(9) {
-  margin-top: 0.625rem;
-  margin-bottom: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__details {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.875rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 768px) {
-  .footer__header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
-}
-.footer__logo {
-  margin-top: 30px;
-  width: 120px;
-  height: 20px;
-}
 .footer__address-info {
   display: flex;
   flex-direction: column;
@@ -185,7 +162,7 @@
 .footer__bottom-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: baseline;
 }
 @media screen and (min-width: 1280px) {
   .footer__bottom-container {
@@ -230,11 +207,36 @@
   font-family: "Nunito";
   font-weight: 400;
 }
+.footer__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .footer__bottom-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer__logo {
+  width: 120px;
+  height: auto;
+  order: 1;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    order: 0;
+    margin-right: 20px;
+  }
+}
 .footer__copyright {
   margin-top: 0.625rem;
   font-size: 13px;
   font-weight: 400;
   font-family: "Nunito";
+  order: 2;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {

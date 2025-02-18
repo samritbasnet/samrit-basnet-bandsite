@@ -82,7 +82,7 @@
   }
 }
 .footer {
-  background-color:$BandSite-Black;
+  background-color: $BandSite-Black;
   color: $white;
   text-align: left;
   padding: 1.25rem;
@@ -95,6 +95,23 @@
 
   p {
     font-weight: 300;
+  }
+
+  &__top-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__header-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 
   &__title {
@@ -128,48 +145,6 @@
     }
   }
 
-  &__details {
-    font-size: 14.4px;
-    line-height: 22.4px;
-    margin: 1.25rem 0;
-
-    p:nth-child(3),
-    p:nth-child(6),
-    p:nth-child(9) {
-      margin-top: .625rem;
-      margin-bottom: 1.25rem;
-    }
-
-    @include tablet {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.875rem;
-    }
-  }
-
-  &__top-container {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  &__header-container {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
-
-  &__logo {
-    margin-top: 30px;
-    width: 120px;
-    height: 20px;
-  }
-
   &__address-info {
     display: flex;
     flex-direction: column;
@@ -182,7 +157,7 @@
   &__bottom-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: baseline;
 
     @include desktop {
       flex-direction: column;
@@ -230,11 +205,38 @@
     font-weight: 400;
   }
 
+
+  &__bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+  &__logo {
+    width: 120px;
+    height: auto;
+    order: 1;
+
+    @include tablet {
+      order: 0;
+      margin-right: 20px;
+    }
+  }
+
   &__copyright {
     margin-top: .625rem;
     font-size: 13px;
     font-weight: 400;
     font-family: 'Nunito';
+    order: 2;
 
     @include tablet {
       font-size: 14px;
