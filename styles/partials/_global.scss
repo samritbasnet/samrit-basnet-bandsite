@@ -11,19 +11,19 @@
   align-items: center;
   background-color: $BandSite-Black;
   width: 100%;
-  gap: .125rems;
-  padding: .625rem;
+  gap: 2pxs;
+  padding: 10px;
 
   @include tablet {
     flex-direction: row;
-    padding: 2rem 2rem;
-    gap:12.5rem;
+    padding: 32px 32px;
+    gap:200px;
 
   }
 
   @include desktop {
-    padding: 1rem 10rem;
-    gap:12.5rem;
+    padding: 16px 160px;
+    gap:200px;
   }
 &__logo{
   display: flex;
@@ -38,7 +38,7 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: 2rem;
+      gap: 32px;
       display: flex;
       justify-content: center;
     }
@@ -57,9 +57,9 @@
     &-link {
       text-decoration: none;
       color: $Mercury;
-      font-size: 0.875rem;
+      font-size: 14px;
       font-weight: 400;
-      padding: 10px 0;
+      padding: .625rem 0;
       display: block;
       font-family: $font-stack;
       position: relative;
@@ -72,7 +72,7 @@
       }
 
       @include tablet {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 700;
 
 
@@ -82,10 +82,10 @@
   }
 }
 .footer {
-  background-color:$BandSite-DarkBlack;
+  background-color:$BandSite-Black;
   color: $white;
   text-align: left;
-  padding: 20px;
+  padding: 1.25rem;
   font-family: 'Nunito';
 
   @include tablet {
@@ -98,52 +98,52 @@
   }
 
   &__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 24px;
+    line-height: 32px;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     font-family: 'Nunito';
 
     @include tablet {
-      font-size: 2.25rem;
-      line-height: 2rem;
+      font-size: 36px;
+      line-height: 32px;
       font-weight: 700;
-      padding: 30px;
+      padding: 1.875rem;
     }
     @include desktop {
-      padding: 34px;
+      padding: 2.125rem;
     }
   }
 
   &__socials {
     display: flex;
     justify-content: flex-start;
-    gap: 1.25rem;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 1.25rem;
 
     @include tablet {
-      margin-top: 35px;
-      margin-left: 1.25rem;
-      gap: 2.5rem;
+      margin-top: 2.1875rem;
+      margin-left: 20px;
+      gap: 40px;
     }
   }
 
   &__details {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-    margin: 20px 0;
+    font-size: 14.4px;
+    line-height: 22.4px;
+    margin: 1.25rem 0;
 
     p:nth-child(3),
     p:nth-child(6),
     p:nth-child(9) {
-      margin-top: 10px;
-      margin-bottom: 20px;
+      margin-top: .625rem;
+      margin-bottom: 1.25rem;
     }
 
     @include tablet {
       flex-direction: column;
       align-items: center;
-      gap: 30px;
+      gap: 1.875rem;
     }
   }
 
@@ -165,9 +165,9 @@
   }
 
   &__logo {
-    margin-top: 1.875rem;
-    width: 7.5rem;
-    height: 1.25rem;
+    margin-top: 30px;
+    width: 120px;
+    height: 20px;
   }
 
   &__address-info {
@@ -196,12 +196,12 @@
 
     @include tablet {
       flex-direction: row;
-      gap: 40px;
+      gap: 2.5rem;
     }
 
     @include desktop {
       flex-direction: row;
-      gap: 2.5rem;
+      gap: 40px;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -215,29 +215,29 @@
   }
 
   &__address-heading {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
     font-family: 'Nunito';
 
     @include tablet {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   }
 
   &__address-email {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-family: 'Nunito';
     font-weight: 400;
   }
 
   &__copyright {
-    margin-top: 10px;
-    font-size: 0.8125rem;
+    margin-top: .625rem;
+    font-size: 13px;
     font-weight: 400;
     font-family: 'Nunito';
 
     @include tablet {
-      font-size: 0.875rem;
+      font-size: 14px;
     }
   }
 }

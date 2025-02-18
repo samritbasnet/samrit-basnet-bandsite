@@ -73,7 +73,8 @@
   text-align: center;
   min-width: 4rem;
 }
-.header__nav-item--active::after, .header__nav-item:hover::after {
+.header__nav-item--active::after,
+.header__nav-item:hover::after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -83,7 +84,8 @@
   background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
-  .header__nav-item--active::after, .header__nav-item:hover::after {
+  .header__nav-item--active::after,
+  .header__nav-item:hover::after {
     bottom: -0.8rem;
     width: 100%;
   }
@@ -122,4 +124,4 @@
 
 .footer {
   background-color: #323232;
-}/*# sourceMappingURL=global.css.map */
+} /*# sourceMappingURL=global.css.map */
