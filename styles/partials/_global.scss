@@ -1,0 +1,255 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './typography' as *;
+
+* {
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $BandSite-Black;
+  width: 100%;
+  gap: 2px;
+  padding: 10px;
+
+  @include tablet {
+    flex-direction: row;
+    padding: 32px 32px;
+    gap: 200px;
+  }
+
+  @include desktop {
+    padding: 16px 160px;
+    gap: 200px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__nav {
+    width: 100%;
+    font-weight: 400;
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 6.25rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-item {
+      position: relative;
+      text-align: center;
+
+      &--active .header__nav-link {
+        font-weight: 700;
+        color: $white;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $Mercury;
+      font-size: 14px;
+      font-weight: 400;
+      padding: .625rem 0;
+      display: block;
+      font-family: $font-stack;
+      position: relative;
+
+      &:hover {
+        color: $white;
+        font-weight: 700;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: min(100%, 1fr);
+        height: 2px;
+        background-color: $white;
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+      @include tablet {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color:$BandSite-Black;
+  color: $white;
+  text-align: left;
+  padding: 1.25rem;
+  font-family: 'Nunito';
+
+  @include tablet {
+    align-items: center;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+    font-family: 'Nunito';
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 32px;
+      font-weight: 700;
+      padding: 1.875rem;
+    }
+    @include desktop {
+      padding: 2.125rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 1.25rem;
+
+    @include tablet {
+      margin-top: 2.1875rem;
+      margin-left: 20px;
+      gap: 40px;
+    }
+  }
+
+  &__details {
+    font-size: 14.4px;
+    line-height: 22.4px;
+    margin: 1.25rem 0;
+
+    p:nth-child(3),
+    p:nth-child(6),
+    p:nth-child(9) {
+      margin-top: .625rem;
+      margin-bottom: 1.25rem;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.875rem;
+    }
+  }
+
+  &__top-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__header-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    margin-top: 30px;
+    width: 120px;
+    height: 20px;
+  }
+
+  &__address-info {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__address-detai {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      gap: 40px;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__address-first,
+  &__address-second,
+  &__address-third {
+    text-align: left;
+  }
+
+  &__address-heading {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Nunito';
+
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__address-email {
+    font-size: 14px;
+    font-family: 'Nunito';
+    font-weight: 400;
+  }
+
+  &__copyright {
+    margin-top: .625rem;
+
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Nunito';
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}

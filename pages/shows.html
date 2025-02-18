@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+    <link rel="stylesheet" href="../styles/shows.css" />
+    <link rel="stylesheet" href="../styles/global.css">
+
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html">
+      <img
+        class="header__logo"
+        src="../assets/logos/Logo-bandsite.svg"
+        alt="bandsite-logo"
+      />
+    </a>
+    <div class="header__nav-container">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a
+              href="../index.html"
+              class="header__nav-link"
+              aria-label="Biography"
+              >Biography</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <a
+              href="../pages/shows.html"
+              class="header__nav-link"
+              aria-label="Shows"
+              >Shows</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+      <section class="hero">
+        <div class="hero__image-wrapper">
+          <img
+            src="../assets/images/hero-shows.jpg"
+            alt="A concert background image"
+            class="hero__image"
+          />
+        </div>
+
+        <div class="hero__content">
+          <div class="title-container">
+            <h1 class="hero__title">Beautiful Beasts Album</h1>
+            <h2 class="hero__subtitle">Stripes of Yellow x <br /> For The Stings</h2>
+          </div>
+            <div class="hero-music">
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/565624518&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/topdawgent" title="TopDawgEnt" target="_blank" style="color: #cccccc; text-decoration: none;"></a><a href="https://soundcloud.com/topdawgent/zacari-dont-trip" title="Zacari - &quot;Don&#x27;t Trip&quot;" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="shows-table">
+        <h2>Shows</h2>
+
+        <div class="table-container">
+
+          <div class="table-header">
+
+            <span class="header-item">Date</span>
+            <span class="header-item">Venue</span>
+            <span class="header-item">Location</span>
+            <span class="header-item">Buy Tickets</span>
+          </div>
+
+          <div id="shows-list"></div>
+        </div>
+      </div>
+
+
+      <footer class="footer">
+        <div class="footer__top-container">
+          <div class="footer__header-container">
+            <div class="footer__title">Get in Touch</div>
+            <div class="footer__socials">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img
+                  src="/assets/icons/svg/Icon-instagram.svg"
+                  alt="Instagram Logo"
+                />
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img
+                  src="/assets/icons/svg/Icon-facebook.svg"
+                  alt="Facebook Logo"
+                />
+              </a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img
+                  src="/assets/icons/svg/Icon-twitter.svg"
+                  alt="Twitter Logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__address-info">
+          <div class="footer__bottom-container">
+            <div class="footer__address-detai">
+              <div class="footer__address-first">
+                <h2 class="footer__address-heading">The Bees Knees Management</h2>
+                <p>
+                  503 Broadway Penthouse, <br />
+                  New York, NY 10012, USA
+                </p>
+                <p class="footer__address-email">
+                  bookings@archentertainment.com <br />
+                  info@thebeesknees.com
+                </p>
+              </div>
+
+              <div class="footer__address-second">
+                <h2 class="footer__address-heading">Limitless Artist Group</h2>
+                <p>
+                  Booking Agent for <br />
+                  US / South America / Japan
+                </p>
+                <p class="footer__address-email">bookings@limitlessag.com</p>
+              </div>
+
+              <div class="footer__address-third">
+                <h2 class="footer__address-heading">ARCH Entertainment</h2>
+                <p>
+                  Booking Agent for <br />
+                  UK / EU / AU
+                </p>
+                <p class="footer__address-email">
+                  bookings@archentertainment.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom-wrapper">
+          <div class="footer__logo">
+            <img src="/assets/logos/Logo-bandsite.svg" alt="footer logo" />
+          </div>
+          <div class="footer__copyright">
+            Copyright The Bees Knees © 2025 All Rights Reserved
+          </div>
+        </div>
+      </footer>
+      <script src="../scripts/build-show-page.js" defer></script>
+</body>
+</html>
