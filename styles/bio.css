@@ -52,7 +52,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 32px;
+  gap: 6.25rem;
   display: flex;
   justify-content: center;
 }
@@ -360,6 +360,27 @@ body {
     padding: 3rem;
   }
 }
+.about-musician__quote {
+  font-size: 0.75rem;
+  line-height: 2rem;
+  padding: 2.5rem 16.875rem;
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2.5rem 16.875rem;
+  }
+}
+.about-musician__title {
+  font-weight: 400;
+  font-size: 36px;
+}
+.about-musician__info {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
 .about-musician__text {
   text-align: left;
   padding: 1.5rem 0;
@@ -386,12 +407,14 @@ body {
   .about-musician__heading-text {
     font-size: 2.25rem;
     line-height: 2.75rem;
+    font-weight: 700;
   }
 }
 @media screen and (min-width: 1280px) {
   .about-musician__heading-text {
     font-size: 2.25rem;
     line-height: 2.75rem;
+    font-weight: 700;
   }
 }
 .about-musician__image-wrapper {
@@ -427,7 +450,7 @@ body {
 @media screen and (min-width: 768px) {
   .about-musician__quote {
     flex-direction: column;
-    padding: 2.25rem 6.25rem;
+    padding: 1.5rem 10.875rem;
     width: 100%;
     font-family: "Nunito";
     font-size: 1.5rem;
@@ -544,9 +567,14 @@ body {
 }
 
 .comment-section {
-  max-width: 55srem;
+  max-width: 55rem;
   margin: auto;
   padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment-section {
+    max-width: 65rem;
+  }
 }
 
 .comment-list {
@@ -562,7 +590,7 @@ body {
   gap: 1rem;
   padding: 1rem;
   background: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   border-bottom: 1px solid grey;
 }
 .comment img {
@@ -584,12 +612,24 @@ body {
   border-bottom: 1px solid #e1e1e1;
   align-items: flex-start;
 }
+@media screen and (min-width: 768px) {
+  .add-new {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .add-new .form-header {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .add-new .form-header {
+    margin-bottom: 160px;
+  }
 }
 .add-new .comment-form {
   display: flex;
@@ -598,6 +638,11 @@ body {
   gap: 0.5rem;
   color: #323232;
   width: 16.875rem;
+}
+@media screen and (min-width: 768px) {
+  .add-new .comment-form {
+    width: 32.5rem;
+  }
 }
 .add-new .comment-form label {
   font-size: 0.8125rem;
@@ -616,6 +661,7 @@ body {
   font-size: 0.8125rem;
   font-weight: 400;
   margin: 0;
+  height: 40px;
 }
 .add-new .comment-form textarea {
   resize: none;
@@ -636,6 +682,16 @@ body {
   align-self: flex-end;
   margin-top: 0.5rem;
   transition: background-color 0.3s ease;
+}
+@media screen and (min-width: 768px) {
+  .add-new .comment-form button {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .add-new .comment-form button {
+    width: 35%;
+  }
 }
 .add-new .comment-form button:hover {
   background-color: #000000;
