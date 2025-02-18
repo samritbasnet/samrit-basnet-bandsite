@@ -273,6 +273,12 @@ body {
   color: #ffffff;
   overflow: hidden;
 }
+.hero .title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
 .hero__image-wrapper {
   position: absolute;
   top: 0;
@@ -281,6 +287,16 @@ body {
   height: 100%;
   z-index: -1;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .hero__image-wrapper {
+    height: 52.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__image-wrapper {
+    height: 56.26rem;
+  }
 }
 .hero__image-wrapper::before {
   content: "";
@@ -301,15 +317,25 @@ body {
   display: block;
 }
 .hero__content {
-  max-width: 800px;
-  width: 550px;
+  max-width: 53.125rem;
+  width: 100%;
   position: relative;
   z-index: 2;
   display: block;
 }
 .hero__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    font-size: 3.75rem;
+  }
 }
 .hero__subtitle {
   font-size: 36px;
@@ -333,13 +359,13 @@ body {
 
 .table-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 h2 {
   text-align: left;
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .table-header {
@@ -368,7 +394,6 @@ h2 {
 #shows-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 100%;
 }
 
@@ -377,7 +402,7 @@ h2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 15px 20px;
+  padding: 15px 0;
   cursor: pointer;
   border-bottom: 1px solid #e1e1e1;
 }
@@ -395,14 +420,16 @@ h2 {
 
 .details {
   display: flex;
-  flex: 3;
   flex-direction: column;
   gap: 5px;
+}
+.details > * {
+  width: 100%;
+  min-width: 11.25rem;
 }
 @media screen and (min-width: 1280px) {
   .details {
     flex-direction: row;
-    gap: 100px;
   }
 }
 

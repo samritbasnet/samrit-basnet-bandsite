@@ -19,7 +19,14 @@ body {
     padding: 40px;
     color:$white;
     overflow: hidden;
+.title-container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
 
+width: 100%;
+
+}
     &__image-wrapper {
       position: absolute;
       top: 0;
@@ -28,6 +35,12 @@ body {
       height: 100%;
       z-index: -1;
       display: flex;
+      @include tablet{
+        height: 52.25rem;
+      }
+      @include desktop{
+        height: 56.26rem;
+      }
 
       &::before {
         content: '';
@@ -50,16 +63,22 @@ body {
     }
 
     &__content {
-      max-width: 800px;
-      width: 550px;
+      max-width: 53.125rem;
+      width: 100%;
       position: relative;
       z-index: 2;
       display: block;
     }
 
     &__title {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: bold;
+      @include tablet{
+        font-size: 3.75rem;
+      }
+      @include desktop{
+        font-size: 3.75rem;
+      }
     }
 
     &__subtitle {
@@ -85,13 +104,13 @@ body {
 
   .table-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 850px;
   }
 
   h2 {
     text-align: left;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .table-header {
@@ -117,7 +136,6 @@ body {
   #shows-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
   }
 
@@ -126,9 +144,11 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 15px 20px;
+        padding: 15px 0;
         cursor: pointer;
+
         border-bottom: 1px solid $Mercury;
+
         @include desktop{
           flex-direction: row;
         }
@@ -144,12 +164,15 @@ body {
 
   .details {
     display: flex;
-    flex: 3;
+    &>*{
+      width: 100%;
+      min-width: 11.25rem;
+    }
     flex-direction: column;
+
     gap: 5px;
     @include desktop{
       flex-direction: row;
-      gap:100px;
 
     }
   }
