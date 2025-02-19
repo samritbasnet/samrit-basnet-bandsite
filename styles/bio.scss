@@ -89,8 +89,6 @@ body {
   flex-direction: column;
   padding: 1rem;
 
-
-
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -127,8 +125,6 @@ body {
 
     @include tablet {
       padding: 2.25rem 0;
-
-
     }
 
     @include desktop {
@@ -245,8 +241,6 @@ body {
     }
   }
 }
-
-
 .gallery {
   text-align: center;
   margin: 0 auto;
@@ -396,12 +390,10 @@ body {
       margin: 0;
       height: 40px;
     }
-
     textarea {
       resize: none;
       min-height: 100px;
     }
-
     button {
       background-color: $BandSite-Black;
       color: white;
@@ -430,7 +422,6 @@ body {
     }
   }
 }
-
 .form-title{
   margin-left: 40px;
 }
