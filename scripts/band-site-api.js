@@ -6,6 +6,7 @@ class BandSiteApi {
   async postComment(comment) {
     try {
       const response = await axios.post(`${this.baseURL}/comments`, comment, {
+        ///
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${this.apiKey}`,

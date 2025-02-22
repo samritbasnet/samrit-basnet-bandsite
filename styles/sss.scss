@@ -1,0 +1,115 @@
+.shows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  width: 100%;
+
+  &__table {
+    width: 100%;
+    max-width: 53.125rem;
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__header {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    color: $silver;
+    font-weight: 400;
+
+    @include tablet {
+      display: flex;
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__header-item {
+    flex: 1;
+    text-align: left;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.9375rem 0;
+    cursor: pointer;
+    border-bottom: 1px solid $Mercury;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    &:hover {
+      background-color: $Alabaster;
+    }
+
+    &--selected {
+      background-color: $Mercury;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & > * {
+      width: 100%;
+      min-width: 11.25rem;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__date {
+    font-weight: bold;
+  }
+
+  &__button {
+    flex: 1;
+    background-color: $BandSite-Black;
+    color: white;
+    border: none;
+    padding: 0.625rem 0.9375rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  &__label-mobile {
+    color: $silver;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+}

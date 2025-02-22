@@ -88,122 +88,113 @@ width: 100%;
 
     &__music {
       width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
+      max-width: 50rem;
+      border-radius: .625rem;
       display: block;
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
   }
-  .shows-table {
+  .shows {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
     width: 100%;
-  }
 
-  .table-container {
-    width: 100%;
-    max-width: 850px;
-  }
+    &__table {
+        width: 100%;
+        max-width: 53.125rem;
+    }
 
-  h2 {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 1.25rem;
-  }
+    &__title {
+        text-align: left;
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
 
-  .table-header {
-    display: none;
-        justify-content: space-between;
-        align-items: center;
+    &__header {
+        display: none;
         color: $silver;
         font-weight: 400;
-        @include tablet{
-          display: flex;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
         }
-        @include desktop{
-          display: flex;
-        }
+    }
 
-  }
+    &__header-item {
+        flex-grow: 1;
+        text-align: left;
+    }
 
-  .header-item {
-    flex: 1;
-    text-align: left;
-  }
-
-  #shows-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
- .show-row {
-    display: flex;
+    &__list {
+        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 15px 0;
-        cursor: pointer;
+        width: 100%;
+    }
 
+    &__row {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
         border-bottom: 1px solid $Mercury;
 
-        @include desktop{
-          flex-direction: row;
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+
+            &:hover {
+                background-color: $Alabaster;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-grow: 1;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    &__label {
+        color: $silver;
+        font-size: 0.875rem;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__info {
+        font-weight: 600;
+    }
+
+    &__button {
+        background-color: $BandSite-Black;
+        color: white;
+        border: none;
+        padding: 0.625rem 0.9375rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+        width: 100%;
+
+        @include tablet {
+            margin-top: 0;
+            width: auto;
         }
 
-    &:hover {
-      background-color: $Alabaster;
+        &:hover {
+            background-color: darken($BandSite-Black, 10%);
+        }
     }
-
-    &.selected {
-      background-color:$Mercury;
-    }
-  }
-
-  .details {
-    display: flex;
-    &>*{
-      width: 100%;
-      min-width: 11.25rem;
-    }
-    flex-direction: column;
-
-    gap: 5px;
-    @include desktop{
-      flex-direction: row;
-
-    }
-  }
-
-  .show-date {
-    font-weight: bold;
-  }
-
-  .buy-ticket {
-    flex: 1;
-    background-color: $BandSite-Black;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background-color: #333;
-    }
-
-  }
-  .mobile-label{
-    color:$silver;
-    @include tablet{
-      display: none;
-    }
-    @include desktop{
-      display: none;
-    }
-  }
+}

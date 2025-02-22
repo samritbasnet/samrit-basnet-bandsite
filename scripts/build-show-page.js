@@ -1,108 +1,97 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const showData = [
-    {
-      date: "Mon Sept 08 2025",
-      venue: "Ronald Lane",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Tue Sept 16 2025",
-      venue: "Pier 3 East",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Sat Oct 11 2025",
-      venue: "View Lounge",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Sat Nov 15 2025",
-      venue: "Hyatt Agency",
-      location: "San Francisco, CA",
-    },
-    {
-      date: "Wed Dec 17 2025",
-      venue: "Press Club",
-      location: "San Francisco, CA",
-    },
-  ];
+const showData = [
+  {
+    date: "Mon Sept 08 2025",
+    venue: "Ronald Lane",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Tue Sept 16 2025",
+    venue: "Pier 3 East",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Sat Oct 11 2025",
+    venue: "View Lounge",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Sat Nov 15 2025",
+    venue: "Hyatt Agency",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Wed Dec 17 2025",
+    venue: "Press Club",
+    location: "San Francisco, CA",
+  },
+];
 
-  function createElementWithClassAndContent(
-    tag,
-    className = "",
-    textContent = ""
-  ) {
-    const newElement = document.createElement(tag);
+function createElementWithClassAndContent(
+  tag,
+  className = "",
+  textContent = ""
+) {
+  const element = document.createElement(tag);
 
-    if (className !== undefined) {
-      newElement.classList.add(className);
-    }
+  if (className) element.className = className;
+  if (textContent) element.textContent = textContent;
+  return element;
+}
 
-    if (textContent !== undefined) {
-      newElement.textContent = textContent;
-    }
+const showList = document.getElementById("shows-list");
 
-    return newElement;
-  }
-
+function renderShows() {
   const showList = document.getElementById("shows-list");
 
-  function renderShows() {
-    showData.forEach((show) => {
-      const row = createElementWithClassAndContent("div", "show-row");
-      const details = createElementWithClassAndContent("div", "details");
-      const dates = createElementWithClassAndContent(
-        "div",
-        "mobile-label",
-        "Date"
-      );
-      const venuelabel = createElementWithClassAndContent(
-        "div",
-        "mobile-label",
-        "Venue"
-      );
-      const locationlabel = createElementWithClassAndContent(
-        "div",
-        "mobile-label",
-        "Location"
-      );
-      const date = createElementWithClassAndContent(
-        "strong",
-        "show-date",
-        show.date
-      );
-      const venue = createElementWithClassAndContent(
-        "span",
-        "show-venue",
-        show.venue
-      );
-      const location = createElementWithClassAndContent(
-        "span",
-        "show-location",
-        show.location
-      );
+  showData.forEach((show) => {
+    const row = createElementWithClassAndContent("div", "shows__row");
+    const details = createElementWithClassAndContent("div", "shows__details");
 
-      const buyButton = createElementWithClassAndContent(
-        "button",
-        "buy-ticket",
-        "Buy Tickets"
-      );
-      buyButton.addEventListener("click", () => {
-        alert(`Tickets for ${show.venue} on ${show.date} clicked!`);
-      });
+    const dateLabel = createElementWithClassAndContent(
+      "div",
+      "shows__label",
+      "DATE"
+    );
+    const date = createElementWithClassAndContent(
+      "div",
+      "shows__info",
+      show.date
+    );
+    const venueLabel = createElementWithClassAndContent(
+      "div",
+      "shows__label",
+      "VENUE"
+    );
+    const venue = createElementWithClassAndContent(
+      "div",
+      "shows__info",
+      show.venue
+    );
+    const locationLabel = createElementWithClassAndContent(
+      "div",
+      "shows__label",
+      "LOCATION"
+    );
+    const location = createElementWithClassAndContent(
+      "div",
+      "shows__info",
+      show.location
+    );
 
-      details.appendChild(dates);
-      details.appendChild(date);
-      details.appendChild(venuelabel);
-      details.appendChild(venue);
-      details.appendChild(locationlabel);
-      details.appendChild(location);
-      row.appendChild(details);
-      row.appendChild(buyButton);
+    details.append(dateLabel, date, venueLabel, venue, locationLabel, location);
 
-      showList.appendChild(row);
+    const buyButton = createElementWithClassAndContent(
+      "button",
+      "shows__button",
+      "BUY TICKETS"
+    );
+    buyButton.addEventListener("click", () => {
+      alert(`Tickets for ${show.venue} on ${show.date} clicked!`);
     });
-  }
 
-  renderShows();
-});
+    row.append(details, buyButton);
+    showList.appendChild(row);
+  });
+}
+
+renderShows();

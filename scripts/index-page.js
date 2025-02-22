@@ -87,7 +87,8 @@ addNewForm.addEventListener("submit", (event) => {
   const name = event.target.name.value.trim();
   const commentText = event.target.comment.value.trim();
 
-  if (!name || !commentText) return;
+  if (!name || !commentText)
+    [alert("Please fill both fields before submitting")];
 
   const person = { name, comment: commentText };
 

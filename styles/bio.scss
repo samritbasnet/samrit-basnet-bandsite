@@ -296,6 +296,10 @@ body {
   padding: 1rem;
   @include tablet{
     max-width: 65rem;
+    flex: 1;
+  }
+  @include desktop{
+    flex:1;
   }
 }
 .comment-list{
@@ -320,7 +324,7 @@ body {
   border-radius: 0.25rem;
    border-bottom: 1px solid grey;
 
-  img {
+   &__avatar  {
     width: 3.12rem;
     height: 3.12rem;
     border-radius: 50%;
@@ -329,10 +333,10 @@ body {
   }
 
 }
-.form-container{
+.section__container{
   border-bottom: 1px solid $Mercury;
 }
-.add-new {
+.comment-form {
   display: flex;
   flex-direction: row;
   gap: 1.75rem;
@@ -347,18 +351,43 @@ body {
     align-items: center;
     justify-content:center;
   }
-
-  .form-header {
-    width: 50px;
-    height: 50px;
+  &__avatar  {
+    width: 3.12rem;
+    height: 3.12rem;
     border-radius: 50%;
     object-fit: cover;
+
+  }
+  &__button {
+    background-color: $BandSite-Black;
+    font-style: $font-stack;
+    color: white;
+    border: none;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 100%;
+    display: block;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
     @include tablet{
-      margin-bottom: 160px;
+      width: 30%;
+    }
+    @include desktop{
+      width: 35%;
+    }
+
+    &:hover {
+      background-color: $BandSite-DarkBlack;
     }
   }
 
-  .comment-form {
+
+  &__fields{
     display: flex;
     flex-direction: column;
     width: 21.875rem;
@@ -370,7 +399,7 @@ body {
 
     }
 
-    label {
+    &__label {
       font-size: .8125rem;
       font-weight: 700;
       color: $silver;
@@ -388,40 +417,13 @@ body {
       font-size: 0.8125rem;
       font-weight: 400;
       margin: 0;
+      font-family: $font-stack;
       height: 40px;
     }
     textarea {
       resize: none;
       min-height: 100px;
     }
-    button {
-      background-color: $BandSite-Black;
-      color: white;
-      border: none;
-      padding: 0.625rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      border-radius: 0.375rem;
-      cursor: pointer;
-      height: 2.5rem;
-      width: 100%;
-      display: block;
-      align-self: flex-end;
-      margin-top: 0.5rem;
-      transition: background-color 0.3s ease;
-      @include tablet{
-        width: 30%;
-      }
-      @include desktop{
-        width: 35%;
-      }
 
-      &:hover {
-        background-color: $BandSite-DarkBlack;
-      }
-    }
   }
-}
-.form-title{
-  margin-left: 40px;
 }
