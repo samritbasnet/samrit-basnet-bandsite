@@ -1,3 +1,7 @@
+const bandsiteApi = new BandSiteApi("e6c57803-c63f-4647-b6f7-ce9254110873");
+async function getShows(){
+  
+}
 function formatDate(date) {
   if (typeof date === "string") {
     date = new Date(date);

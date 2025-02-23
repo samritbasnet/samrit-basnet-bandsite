@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
   </head>
   <body>
     <header class="header">
@@ -19,7 +18,7 @@
       <div class="header__nav-container">
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="header__nav-item">
+            <li class="header__nav-item header__nav-item--active">
               <a
                 href="./index.html"
                 class="header__nav-link"
@@ -51,10 +50,10 @@
         <h1 class="hero__title">The Bee Knees</h1>
       </div>
     </section>
-    <article class="about-musician">
+    <section class="about-musician">
       <div class="about-musician__heading">
-        <div class="about-musician__text">
-          <h2 class="about-musician__heading-text">About the Musicians</h2>
+        <div class="about-musician__title">
+          <h2 class="about-musician__title-text">About the Musicians</h2>
         </div>
         <div class="about-musician__image-wrapper">
           <img
@@ -98,8 +97,8 @@
           </div>
         </div>
       </div>
-    </article>
-    <article class="gallery">
+    </section>
+    <section class="gallery">
       <h2 class="gallery__title">Photo Gallery</h2>
       <div class="gallery__container">
         <img
@@ -148,7 +147,7 @@
           class="gallery__item"
         />
       </div>
-    </article>
+    </section>
     <section class="comment-section">
       <h2 class="comment-section__title">Join the Conversation</h2>
       <div class="comment-section__container">
@@ -256,7 +255,8 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/band-site-api.js" defer></script>
     <script src="./scripts/index-page.js" defer></script>
   </body>
 </html>

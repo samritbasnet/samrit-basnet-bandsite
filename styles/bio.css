@@ -15,6 +15,8 @@
 }
 * {
   box-sizing: border-box;
+  font-family: Nunito Sans, sans-serif;
+  margin: 0;
 }
 
 .header {
@@ -23,20 +25,21 @@
   align-items: center;
   background-color: #323232;
   width: 100%;
-  gap: 0.125rem;
-  padding: 0.625rem;
+  padding: 10px 10px 0;
 }
 @media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
-    padding: 2rem 2rem;
-    gap: 12.5rem;
+    padding: 32px 22px;
+    align-items: center;
+    gap: 1.875rem;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1280px) {
   .header {
-    padding: 1rem 10rem;
-    gap: 12.5rem;
+    padding: 16px 160px;
+    gap: 200px;
   }
 }
 .header__logo {
@@ -54,22 +57,28 @@
   padding: 0;
   gap: 6.25rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-list {
+    gap: 0;
+  }
 }
 .header__nav-item {
-  position: relative;
+  flex: 1;
   text-align: center;
+  padding: 0.75rem;
 }
-.header__nav-item--active .header__nav-link {
-  font-weight: 700;
-  color: #ffffff;
+.header__nav-item--active {
+  border-bottom: 0.1875rem solid white;
 }
 .header__nav-link {
   text-decoration: none;
   color: #e1e1e1;
   font-size: 0.875rem;
   font-weight: 400;
-  padding: 0.625rem 0;
+  padding: 0.5rem;
   display: block;
   font-family: Nunito Sans, sans-serif;
   position: relative;
@@ -78,22 +87,9 @@
   color: #ffffff;
   font-weight: 700;
 }
-.header__nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.125rem;
-  width: min(100%, 1fr);
-  height: 0.125rem;
-  background-color: #ffffff;
-  transition: width 0.3s ease-in-out;
-}
-.header__nav-link:hover::after {
-  width: 100%;
-}
 @media screen and (min-width: 768px) {
   .header__nav-link {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
   }
 }
@@ -254,13 +250,6 @@
   }
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Nunito", sans-serif;
-}
-
 .hero {
   position: relative;
   height: 14rem;
@@ -301,10 +290,12 @@ body {
 }
 .hero__text {
   font-family: "Nunito";
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
@@ -383,16 +374,23 @@ body {
 }
 .about-musician__text {
   text-align: left;
-  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .about-musician__text {
-    padding: 2.25rem 0;
+    padding-top: 3rem;
+    padding: bottom 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about-musician__text {
-    padding: 2.375rem 0;
+    padding-top: 3rem;
   }
 }
 .about-musician__heading-text {
