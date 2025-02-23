@@ -1,6 +1,33 @@
+function formatDate(date) {
+  if (typeof date === "string") {
+    date = new Date(date);
+  }
+
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  return `${days[date.getDay()]} ${months[date.getMonth()]} ${date
+    .getDate()
+    .toString()
+    .padStart(2, "0")} ${date.getFullYear()}`;
+}
+
 const showData = [
   {
-    date: "Mon Sept 08 2025",
+    date: new Date(2025, 8, 8),
     venue: "Ronald Lane",
     location: "San Francisco, CA",
   },
@@ -32,13 +59,10 @@ function createElementWithClassAndContent(
   textContent = ""
 ) {
   const element = document.createElement(tag);
-
   if (className) element.className = className;
   if (textContent) element.textContent = textContent;
   return element;
 }
-
-const showList = document.getElementById("shows-list");
 
 function renderShows() {
   const showList = document.getElementById("shows-list");
@@ -47,21 +71,13 @@ function renderShows() {
     const row = createElementWithClassAndContent("div", "shows__row");
     const details = createElementWithClassAndContent("div", "shows__details");
 
-    const dateLabel = createElementWithClassAndContent(
-      "div",
-      "shows__label",
-      "DATE"
-    );
+    const dateLabel = createElementWithClassAndContent("div", "shows__label");
     const date = createElementWithClassAndContent(
       "div",
       "shows__info",
-      show.date
+      formatDate(show.date)
     );
-    const venueLabel = createElementWithClassAndContent(
-      "div",
-      "shows__label",
-      "VENUE"
-    );
+    const venueLabel = createElementWithClassAndContent("div", "shows__label");
     const venue = createElementWithClassAndContent(
       "div",
       "shows__info",
@@ -69,8 +85,7 @@ function renderShows() {
     );
     const locationLabel = createElementWithClassAndContent(
       "div",
-      "shows__label",
-      "LOCATION"
+      "shows__label"
     );
     const location = createElementWithClassAndContent(
       "div",
@@ -86,7 +101,7 @@ function renderShows() {
       "BUY TICKETS"
     );
     buyButton.addEventListener("click", () => {
-      alert(`Tickets for ${show.venue} on ${show.date} clicked!`);
+      alert(`Tickets for ${show.venue} on ${formatDate(show.date)} clicked!`);
     });
 
     row.append(details, buyButton);

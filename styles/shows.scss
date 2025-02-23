@@ -107,24 +107,31 @@ width: 100%;
     }
 
     &__title {
-        text-align: left;
+        text-align: center;
         font-size: 1.5rem;
         margin-bottom: 1.25rem;
     }
 
     &__header {
-        display: none;
+        display: flex;
         color: $silver;
         font-weight: 400;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-transform: uppercase;
+
 
         @include tablet {
             display: flex;
             justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 2px solid $Mercury;
         }
     }
 
     &__header-item {
-        flex-grow: 1;
+        flex: 1;
         text-align: left;
     }
 
@@ -136,14 +143,12 @@ width: 100%;
 
     &__row {
         display: flex;
-        flex-direction: column;
         padding: 1rem 0;
         border-bottom: 1px solid $Mercury;
-
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         @include tablet {
-            flex-direction: row;
-            align-items: center;
-
             &:hover {
                 background-color: $Alabaster;
             }
@@ -152,30 +157,22 @@ width: 100%;
 
     &__details {
         display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        flex-grow: 1;
-
-        @include tablet {
-            flex-direction: row;
-            gap: 1rem;
-        }
-    }
-
-    &__label {
-        color: $silver;
-        font-size: 0.875rem;
-
-        @include tablet {
-            display: none;
-        }
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     &__info {
+        flex: 1;
+        text-align: left;
         font-weight: 600;
+        min-width: 6rem;
     }
 
     &__button {
+      flex: .5;
         background-color: $BandSite-Black;
         color: white;
         border: none;
@@ -185,13 +182,9 @@ width: 100%;
         text-align: center;
         border-radius: 4px;
         transition: background-color 0.3s ease;
-        margin-top: 1rem;
+        flex-shrink: 0;
         width: 100%;
 
-        @include tablet {
-            margin-top: 0;
-            width: auto;
-        }
 
         &:hover {
             background-color: darken($BandSite-Black, 10%);
