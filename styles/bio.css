@@ -586,7 +586,7 @@ body {
 .comment-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -610,6 +610,13 @@ body {
   width: 3.12rem;
   height: 3.12rem;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.comment img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
 }

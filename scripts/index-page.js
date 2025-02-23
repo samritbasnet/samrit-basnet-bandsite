@@ -56,6 +56,11 @@ function commentCard(person) {
     undefined,
     person.name
   );
+  const dateEl = createElementWithClassAndContent(
+    "p",
+    "comment__date",
+    person.date
+  );
   const commentParagraph = createElementWithClassAndContent(
     "p",
     undefined,
@@ -63,6 +68,7 @@ function commentCard(person) {
   );
 
   commentContentDiv.appendChild(nameHeader);
+   commentContentDiv.appendChild(dateEl);
   commentContentDiv.appendChild(commentParagraph);
   articleEl.appendChild(commentContentDiv);
 
@@ -79,7 +85,7 @@ function renderComment() {
   });
 }
 
-const addNewForm = document.querySelector(".add-new");
+const addNewForm = document.querySelector(".comment-form");
 
 addNewForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -90,7 +96,11 @@ addNewForm.addEventListener("submit", (event) => {
   if (!name || !commentText)
     [alert("Please fill both fields before submitting")];
 
-  const person = { name, comment: commentText };
+  const person = {
+    name,
+    comment: commentText,
+    date: new Date().toLocaleDateString("en-Us"),
+  };
 
   comment.unshift(person);
   renderComment();

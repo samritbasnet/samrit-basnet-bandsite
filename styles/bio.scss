@@ -305,7 +305,7 @@ body {
 .comment-list{
   display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap:rem;
   margin: 0 auto;
   @include tablet{
     justify-content: center;
@@ -331,7 +331,12 @@ body {
     object-fit: cover;
 
   }
-
+ img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
 }
 .section__container{
   border-bottom: 1px solid $Mercury;
