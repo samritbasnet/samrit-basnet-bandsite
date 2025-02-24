@@ -110,10 +110,9 @@ addNewForm.addEventListener("submit", async (event) => {
   const person = {
     name,
     comment: commentText,
-    // date: new Date().toLocaleDateString("en-Us"),
   };
   await PostComment(person);
-  // comment.unshift(person);
+
   await renderComment();
   event.target.reset();
 });

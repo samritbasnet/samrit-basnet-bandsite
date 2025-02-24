@@ -32,4 +32,16 @@ class BandSiteApi {
       return [];
     }
   }
+  async getShows() {
+    try {
+      const response = await axios.get(
+        `${this.baseURL}/showdates/?api_key=${this.apiKey}`
+      );
+
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching shows date:", error);
+      return [];
+    }
+  }
 }

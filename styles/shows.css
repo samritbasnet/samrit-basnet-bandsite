@@ -408,7 +408,7 @@
   min-width: 6rem;
 }
 .shows__button {
-  flex: 0.5;
+  flex: 0.125;
   background-color: #323232;
   color: white;
   border: none;
