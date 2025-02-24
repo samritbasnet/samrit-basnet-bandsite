@@ -328,22 +328,32 @@ input:invalid {
   display: block;
 }
 .hero__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    font-size: 3.75rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    font-size: 3.75rem;
+    font-size: 1.5rem;
   }
 }
 .hero__subtitle {
-  font-size: 36px;
+  font-size: 1.5rem;
   font-weight: bold;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1280px) {
+  .hero__subtitle {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
 }
 .hero__music {
   width: 100%;
@@ -356,7 +366,7 @@ input:invalid {
 .shows {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   padding: 1.25rem;
   width: 100%;
 }
@@ -365,7 +375,7 @@ input:invalid {
   max-width: 53.125rem;
 }
 .shows__title {
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
 }
