@@ -48,9 +48,13 @@ function commentCard(person) {
     undefined,
     person.comment
   );
-
-  commentContentDiv.appendChild(nameHeader);
-  commentContentDiv.appendChild(dateEl);
+  const divdateEl = createElementWithClassAndContent(
+    "div",
+    "comment-container"
+  );
+  commentContentDiv.appendChild(divdateEl);
+  divdateEl.appendChild(nameHeader);
+  divdateEl.appendChild(dateEl);
   commentContentDiv.appendChild(commentParagraph);
   articleEl.appendChild(commentContentDiv);
 

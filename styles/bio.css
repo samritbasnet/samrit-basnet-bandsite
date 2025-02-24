@@ -43,14 +43,17 @@ input:invalid {
 }
 @media screen and (min-width: 1280px) {
   .header {
-    padding: 16px 160px;
-    gap: 200px;
+    padding: 1rem 10rem;
+    gap: 12.5rem;
   }
 }
 .header__logo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-top: 1.25rem;
+  height: 1.25rem;
+  width: 7.5rem;
 }
 .header__nav {
   width: 100%;
@@ -76,7 +79,7 @@ input:invalid {
   padding: 0.75rem;
 }
 .header__nav-item--active {
-  border-bottom: 0.1875rem solid white;
+  border-bottom: 0.28rem solid white;
 }
 .header__nav-link {
   text-decoration: none;
@@ -257,18 +260,7 @@ input:invalid {
 
 .hero {
   position: relative;
-  height: 14rem;
   overflow: hidden;
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    height: 31.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero {
-    height: 36rem;
-  }
 }
 .hero__image-wrapper {
   position: relative;
@@ -297,7 +289,7 @@ input:invalid {
   font-family: Nunito Sans, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   position: absolute;
   top: 50%;
   left: 20%;
@@ -307,33 +299,34 @@ input:invalid {
 }
 @media screen and (min-width: 768px) {
   .hero__text {
-    left: 24%;
+    left: 34%;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__text {
-    left: 26%;
+    left: 36%;
   }
 }
-.hero__title {
+.hero__caption {
   font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  font-family: "Nunito";
+  font-weight: 600;
   color: #ffffff;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .hero__title {
+  .hero__caption {
     font-size: 3.75rem;
-    line-height: 4.25rem;
     font-weight: 700;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    line-height: 4.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero__title {
+  .hero__caption {
     font-size: 3.75rem;
-    line-height: 4.25rem;
     font-weight: 700;
+    line-height: 4.25rem;
   }
 }
 
@@ -357,7 +350,7 @@ input:invalid {
   }
 }
 .about-musician__quote {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 2rem;
   padding: 2.5rem 16.875rem;
 }
@@ -368,9 +361,29 @@ input:invalid {
     padding: 2.5rem 16.875rem;
   }
 }
-.about-musician__title {
-  font-weight: 400;
-  font-size: 36px;
+.about-musician__subtitle {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  padding-bottom: 1rem;
+  color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .about-musician__subtitle {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    font-weight: 400;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about-musician__subtitle {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
 }
 .about-musician__info {
   font-size: 0.875rem;
@@ -441,7 +454,6 @@ input:invalid {
   }
 }
 .about-musician__quote {
-  margin: 0;
   padding: 1rem 0;
   text-align: left;
   font-size: 0.875rem;
@@ -452,11 +464,13 @@ input:invalid {
 }
 @media screen and (min-width: 768px) {
   .about-musician__quote {
-    flex-direction: column;
-    padding: 1.5rem 10.875rem;
-    width: 100%;
-    font-family: "Nunito";
-    font-size: 1.5rem;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 1.5rem 4.7rem;
+    font-size: 0.875rem;
+    line-height: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
     line-height: 2rem;
     font-weight: medium;
   }
@@ -523,6 +537,7 @@ input:invalid {
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
+  background-color: #fafafa;
 }
 .gallery__title {
   font-size: 1.5rem;
@@ -530,6 +545,7 @@ input:invalid {
   text-align: left;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: #323232;
 }
 @media screen and (min-width: 768px) {
   .gallery__title {
@@ -609,6 +625,9 @@ input:invalid {
   border-radius: 0.25rem;
   border-bottom: 1px solid grey;
 }
+.comment__component {
+  width: 100%;
+}
 .comment__avatar {
   width: 3.12rem;
   height: 3.12rem;
@@ -634,7 +653,7 @@ input:invalid {
   gap: 1.75rem;
   margin: 1rem;
   padding: 1rem;
-  width: 90%;
+  width: 100%;
   border-radius: 0.25rem;
   align-items: flex-start;
 }
@@ -685,10 +704,9 @@ input:invalid {
 .comment-form__fields {
   display: flex;
   flex-direction: column;
-  width: 21.875rem;
+  width: 100%;
   gap: 0.5rem;
   color: #323232;
-  width: 16.875rem;
 }
 @media screen and (min-width: 768px) {
   .comment-form__fields {
@@ -719,4 +737,11 @@ input:invalid {
   resize: none;
   min-height: 100px;
   font-family: Nunito Sans, sans-serif;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -5,16 +5,8 @@
 
 .hero {
   position: relative;
-  height: 14rem;
+
   overflow: hidden;
-
-  @include tablet {
-    height: 31.25rem;
-  }
-
-  @include desktop {
-    height: 36rem;
-  }
 
   &__image-wrapper {
     position: relative;
@@ -40,12 +32,11 @@
     height: 100%;
     object-fit: cover;
   }
-
   &__text {
     font-family: $font-stack;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     position: absolute;
     top: 50%;
     left: 20%;
@@ -54,29 +45,29 @@
     text-align: center;
 
     @include tablet {
-      left: 24%;
+      left: 34%;
     }
     @include desktop {
-      left: 26%;
+      left: 36%;
     }
   }
 
-  &__title {
+  &__caption {
     font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    font-family: "Nunito";
+    font-weight: 600;
     color: $white;
-
+    line-height: 2rem;
     @include tablet {
       font-size: 3.75rem;
-      line-height: 4.25rem;
       font-weight: 700;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      line-height: 4.25rem;
     }
     @include desktop {
       font-size: 3.75rem;
-      line-height: 4.25rem;
       font-weight: 700;
+      line-height: 4.25rem;
     }
   }
 }
@@ -97,7 +88,7 @@
     padding: 3rem;
   }
   &__quote {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 2rem;
     padding: 2.5rem 16.875rem;
     @include desktop {
@@ -106,9 +97,26 @@
       padding: 2.5rem 16.875rem;
     }
   }
-  &__title {
-    font-weight: 400;
-    font-size: 36px;
+  &__subtitle {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding-bottom: 1rem;
+    color: $BandSite-Black;
+
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2.75rem;
+      font-weight: 400;
+      padding-bottom: 2.25rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      line-height: 2.75rem;
+      font-weight: 700;
+    }
   }
   &__info {
     font-size: 0.875rem;
@@ -173,7 +181,6 @@
     }
   }
   &__quote {
-    margin: 0;
     padding: 1rem 0;
     text-align: left;
     font-size: 0.875rem;
@@ -183,11 +190,13 @@
     color: $BandSite-Black;
 
     @include tablet {
-      flex-direction: column;
-      padding: 1.5rem 10.875rem;
-      width: 100%;
-      font-family: "Nunito";
-      font-size: 1.5rem;
+      flex-direction: row;
+      align-items: stretch;
+      padding: 1.5rem 4.7rem;
+      font-size: 0.875rem;
+      line-height: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
       line-height: 2rem;
       font-weight: medium;
     }
@@ -230,14 +239,14 @@
     font-family: "Nunito";
     line-height: 1.125rem;
 
-      @include tablet {
+    @include tablet {
       font-size: 0.875rem;
       font-weight: 400;
       line-height: 1.375rem;
     }
   }
   &__info {
-      @include tablet {
+    @include tablet {
       display: flex;
       align-items: flex-start;
       border: 4px solid white;
@@ -249,6 +258,7 @@
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
+  background-color: $Alabaster;
 
   &__title {
     font-size: 1.5rem;
@@ -256,6 +266,7 @@
     text-align: left;
     font-weight: bold;
     margin-bottom: 1.5rem;
+    color: $BandSite-Black;
     @include tablet {
       font-size: 2.25rem;
       line-height: 2.75rem;
@@ -324,7 +335,9 @@
   background: $white;
   border-radius: 0.25rem;
   border-bottom: 1px solid grey;
-
+  &__component {
+    width: 100%;
+  }
   &__avatar {
     width: 3.12rem;
     height: 3.12rem;
@@ -349,7 +362,7 @@
   gap: 1.75rem;
   margin: 1rem;
   padding: 1rem;
-  width: 90%;
+  width: 100%;
   border-radius: 0.25rem;
 
   align-items: flex-start;
@@ -395,10 +408,10 @@
   &__fields {
     display: flex;
     flex-direction: column;
-    width: 21.875rem;
+    width: 100%;
     gap: 0.5rem;
     color: $BandSite-Black;
-    width: 16.875rem;
+
     @include tablet {
       width: 32.5rem;
     }
@@ -423,11 +436,17 @@
       font-family: $font-stack;
       height: 40px;
     }
-
     textarea {
       resize: none;
       min-height: 100px;
       font-family: $font-stack;
     }
   }
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
 }
