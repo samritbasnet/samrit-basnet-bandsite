@@ -19,6 +19,11 @@
   margin: 0;
 }
 
+textarea:invalid,
+input:invalid {
+  outline-color: red;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -289,7 +294,7 @@
      object-fit: cover;
 }
 .hero__text {
-  font-family: "Nunito";
+  font-family: Nunito Sans, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -713,4 +718,5 @@
 .comment-form__fields textarea {
   resize: none;
   min-height: 100px;
+  font-family: Nunito Sans, sans-serif;
 }/*# sourceMappingURL=bio.css.map */

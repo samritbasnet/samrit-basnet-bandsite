@@ -7,6 +7,11 @@
   font-family: $font-stack;
   margin: 0;
 }
+textarea:invalid,
+input:invalid {
+  outline-color: red;
+}
+
 .header {
   display: flex;
   flex-direction: column;

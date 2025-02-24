@@ -1,7 +1,8 @@
 class BandSiteApi {
   constructor(apiKey) {
     this.apiKey = apiKey;
-    this.baseURL = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
+    // this.baseURL = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
+    this.baseURL = "https://project-1-api.herokuapp.com";
   }
   async postComment(comment) {
     try {

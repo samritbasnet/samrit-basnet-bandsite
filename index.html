@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
+    <link rel="stylesheet" href="./">
   </head>
   <body>
     <header class="header">
@@ -159,13 +160,19 @@
           />
           <div class="comment-form__fields">
             <label for="name">NAME</label>
-            <input name="name" id="name" placeholder="Enter your name" />
+            <input
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
 
             <label class="comment-form__label" for="comment">COMMENT</label>
             <textarea
               name="comment"
               id="comment"
               placeholder="Add a new comment"
+              required
             ></textarea>
             <button class="comment-form__button" type="submit">Comment</button>
           </div>
