@@ -1,0 +1,16 @@
+ <div class="shows-table">
+        <h2>Shows</h2>
+
+        <div class="table-container">
+
+          <div class="table-header">
+
+            <span class="header-item">Date</span>
+            <span class="header-item">Venue</span>
+            <span class="header-item">Location</span>
+            <span class="header-item">Buy Tickets</span>
+          </div>
+
+          <div id="shows-list"></div>
+        </div>
+      </div>

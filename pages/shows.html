@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shows</title>
     <link rel="stylesheet" href="../styles/shows.css" />
-    <link rel="stylesheet" href="../styles/global.css">
+    
 
 </head>
 <body>
@@ -20,7 +20,7 @@
     <div class="header__nav-container">
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item">
+          <li class="header__nav-item  ">
             <a
               href="../index.html"
               class="header__nav-link"
@@ -28,7 +28,7 @@
               >Biography</a
             >
           </li>
-          <li class="header__nav-item">
+          <li class="header__nav-item header__nav-item--active">
             <a
               href="../pages/shows.html"
               class="header__nav-link"
@@ -62,22 +62,18 @@
           </div>
         </div>
       </section>
-      <div class="shows-table">
-        <h2>Shows</h2>
-
-        <div class="table-container">
-
-          <div class="table-header">
-
-            <span class="header-item">Date</span>
-            <span class="header-item">Venue</span>
-            <span class="header-item">Location</span>
-            <span class="header-item">Buy Tickets</span>
-          </div>
-
-          <div id="shows-list"></div>
+      <section class="shows">
+        <h2 class="shows__title">Shows</h2>
+        <div class="shows__table">
+            <div class="shows__header">
+                <span class="shows__header-item">Date</span>
+                <span class="shows__header-item">Venue</span>
+                <span class="shows__header-item">Location</span>
+               
+            </div>
+            <div id="shows-list" class="shows__list"></div>
         </div>
-      </div>
+    </section>
 
 
       <footer class="footer">
@@ -162,6 +158,8 @@
           </div>
         </div>
       </footer>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+         <script src="../scripts/band-site-api.js" defer></script>
       <script src="../scripts/build-show-page.js" defer></script>
 </body>
 </html>

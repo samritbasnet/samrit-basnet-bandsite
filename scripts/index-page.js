@@ -1,30 +1,12 @@
-const comment = [
-  {
-    name: "Victor Pinito",
-    date: "01/12/2025",
-    comment:
-      "This is art.This is inexplicable magic expressed in the purest way,everything that makes up this majestic work deserves reverence.Let us appreciate this for what it is and what its contains",
-    image: {
-      src: "/assets/logos/grey.jpg",
-      alt: "dummy avatar image",
-    },
-  },
-  {
-    name: "Jonathan fields",
-    date: "02/19/2025",
-    comment:
-      "A masterpiece beyond words. The essence of creativity and vision captured in its purest form. Let’s admire and cherish it!",
-    image: { src: "/assets/logos/grey.jpg", alt: "dummy avatar image" },
-  },
-  {
-    name: "Samantha Rivers",
-    date: "03/22/2025",
-    comment:
-      "his resonates on a deep level. A true expression of emotion and artistry that transcends explanation.",
-    src: "/assets/logos/grey.jpg",
-    alt: "dummy avatar image",
-  },
-];
+const bandsiteApi = new BandSiteApi("e6c57803-c63f-4647-b6f7-ce9254110873");
+async function getComments() {
+  return await bandsiteApi.getComments();
+}
+
+async function PostComment(person) {
+  await bandsiteApi.postComment(person);
+}
+
 function createElementWithClassAndContent(element, className, textContent) {
   const newElement = document.createElement(element);
 
@@ -56,13 +38,23 @@ function commentCard(person) {
     undefined,
     person.name
   );
+  const dateEl = createElementWithClassAndContent(
+    "p",
+    "comment__date",
+    new Date(person.timestamp).toLocaleDateString()
+  );
   const commentParagraph = createElementWithClassAndContent(
     "p",
     undefined,
     person.comment
   );
-
-  commentContentDiv.appendChild(nameHeader);
+  const divdateEl = createElementWithClassAndContent(
+    "div",
+    "comment-container"
+  );
+  commentContentDiv.appendChild(divdateEl);
+  divdateEl.appendChild(nameHeader);
+  divdateEl.appendChild(dateEl);
   commentContentDiv.appendChild(commentParagraph);
   articleEl.appendChild(commentContentDiv);
 
@@ -70,7 +62,9 @@ function commentCard(person) {
 }
 const commentList = document.querySelector(".comment-list");
 
-function renderComment() {
+async function renderComment() {
+  const comment = await getComments();
+
   commentList.replaceChildren();
 
   comment.forEach((person) => {
@@ -79,20 +73,24 @@ function renderComment() {
   });
 }
 
-const addNewForm = document.querySelector(".add-new");
+const addNewForm = document.querySelector(".comment-form");
 
-addNewForm.addEventListener("submit", (event) => {
+addNewForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const name = event.target.name.value.trim();
   const commentText = event.target.comment.value.trim();
 
-  if (!name || !commentText) return;
+  if (!name || !commentText)
+    [alert("Please fill both fields before submitting")];
 
-  const person = { name, comment: commentText };
+  const person = {
+    name,
+    comment: commentText,
+  };
+  await PostComment(person);
 
-  comment.unshift(person);
-  renderComment();
+  await renderComment();
   event.target.reset();
 });
 
