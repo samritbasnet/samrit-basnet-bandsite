@@ -11,6 +11,12 @@ textarea:invalid,
 input:invalid {
   outline-color: red;
 }
+.label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: $white;
+  margin-top: 0.625rem;
+}
 
 .header {
   display: flex;
@@ -18,7 +24,7 @@ input:invalid {
   align-items: center;
   background-color: $BandSite-Black;
   width: 100%;
-  padding: 10px 10px 0;
+  padding: 0.625rem 10px 0;
 
   @include tablet {
     flex-direction: row;
@@ -85,7 +91,7 @@ input:invalid {
       }
 
       @include tablet {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 700;
       }
     }
@@ -109,15 +115,15 @@ input:invalid {
   }
 
   &__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 400;
     margin-bottom: 1.25rem;
     font-family: "Nunito";
 
     @include tablet {
-      font-size: 36px;
-      line-height: 32px;
+      font-size: 2.25rem;
+      line-height: 2rem;
       font-weight: 700;
       padding: 1.875rem;
     }
@@ -129,19 +135,19 @@ input:invalid {
   &__socials {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 1.25rem;
     margin-bottom: 1.25rem;
 
     @include tablet {
       margin-top: 2.1875rem;
-      margin-left: 20px;
-      gap: 40px;
+      margin-left: 1.25rem;
+      gap: 2.5rem;
     }
   }
 
   &__details {
-    font-size: 14.4px;
-    line-height: 22.4px;
+    font-size: .9rem;
+    line-height: 1.4rem;
     margin: 1.25rem 0;
 
     p:nth-child(3),
@@ -212,7 +218,7 @@ input:invalid {
 
     @include desktop {
       flex-direction: row;
-      gap: 40px;
+      gap: 2.5rem;
       justify-content: center;
       text-align: center;
       align-items: center;
@@ -226,17 +232,17 @@ input:invalid {
   }
 
   &__address-heading {
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     font-family: "Nunito";
 
     @include tablet {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 
   &__address-email {
-    font-size: 14px;
+    font-size: .875rem;
     font-family: "Nunito";
     font-weight: 400;
   }
@@ -244,12 +250,12 @@ input:invalid {
   &__copyright {
     margin-top: 0.625rem;
 
-    font-size: 13px;
+    font-size: .8125rem;
     font-weight: 400;
     font-family: "Nunito";
 
     @include tablet {
-      font-size: 14px;
+      font-size: .875rem;
     }
   }
 }

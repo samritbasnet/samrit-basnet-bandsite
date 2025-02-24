@@ -261,13 +261,17 @@
   background-color: $Alabaster;
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
     line-height: 2rem;
     text-align: left;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     color: $BandSite-Black;
     @include tablet {
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
       font-size: 2.25rem;
       line-height: 2.75rem;
       font-weight: 700;
@@ -314,6 +318,11 @@
   }
   @include desktop {
     flex: 1;
+  }
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
   }
 }
 .comment-list {
@@ -364,7 +373,6 @@
   padding: 1rem;
   width: 100%;
   border-radius: 0.25rem;
-
   align-items: flex-start;
   @include tablet {
     width: 100%;
@@ -410,31 +418,26 @@
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
-    color: $BandSite-Black;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $silver;
+    margin-top: 0.625rem;
 
     @include tablet {
       width: 32.5rem;
     }
-    &__label {
-      font-size: 0.8125rem;
-      font-weight: 700;
-      color: $silver;
-      margin-top: 0.625rem;
-    }
 
     input,
     textarea {
-      background-color: $white;
-      width: 100%;
+      background-color: #fafafa;
       color: $BandSite-Black;
-      padding: 0.5rem;
-      border: 2px solid $silver;
+      padding: 0.5rem 2rem;
+      border: 0.125rem solid #afafaf;
       border-radius: 0.25rem;
-      font-size: 0.8125rem;
       font-weight: 400;
-      margin: 0;
-      font-family: $font-stack;
-      height: 40px;
+      /* margin: 0; */
+      font-family: Nunito Sans, sans-serif;
+      height: 2.5rem;
     }
     textarea {
       resize: none;
